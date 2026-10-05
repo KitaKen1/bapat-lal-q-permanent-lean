@@ -105,7 +105,7 @@ complementary rows turns their aggregate into the weighted coefficient norm of
 
 ```math
 F(z)=\sum_{i<j}(a_i b_j-a_j b_i)
-                 \prod_{r\notin\{i,j\}}(a_r+b_r z).
+                 \prod_{r\ne i,\;r\ne j}(a_r+b_r z).
 ```
 
 The product rule gives $`F=-g`$, so its squared norm is $`S`$.
