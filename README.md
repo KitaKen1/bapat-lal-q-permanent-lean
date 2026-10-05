@@ -6,9 +6,9 @@ The four q-permanent conjectures stated in [da Fonseca's survey](https://arxiv.o
 > complex matrix $`A=(a_{ij})`$ of order $`n`$, the function $`q\mapsto P_q(A)`$
 > is strictly increasing on $`[-1,1]`$.
 
-> **Conjecture 2 (da Fonseca).** For every Hermitian positive definite complex
-> matrix $`A`$, there exists $`ε < -1`$ such that $`q\mapsto P_q(A)`$ is strictly
-> increasing on $`(ε,\infty)`$.
+> **Conjecture 2 (da Fonseca, non-diagonal form).** For every non-diagonal
+> Hermitian positive definite complex matrix $`A`$, there exists $`ε < -1`$ such
+> that $`q\mapsto P_q(A)`$ is strictly increasing on $`(ε,\infty)`$.
 
 > **Conjecture 3 (Bapat–Lal).** For every Hermitian positive semidefinite complex
 > matrix $`A=(a_{ij})`$ of order $`n`$, every $`q\in[0,1]`$, and every nonempty
@@ -22,6 +22,11 @@ The four q-permanent conjectures stated in [da Fonseca's survey](https://arxiv.o
 > eigenvalue of the q-Schur power matrix $`\Pi_q(A)`$ equals $`P_q(A)`$.
 > Its rows and columns are indexed by permutations $`\sigma,\tau\in S_n`$,
 > with entries $`(\Pi_q(A))_{\sigma,\tau}=q^{\ell(\tau\sigma^{-1})}\prod_{i=1}^{n}a_{\sigma(i),\tau(i)}`$.
+
+Conjecture 2 uses the non-diagonal hypothesis explicitly stated in
+[Mitchell (2020), Remark, p. 917](https://doi.org/10.7153/oam-2020-14-56).
+The 2018 survey omits this condition; diagonal matrices have a constant
+q-permanent and cannot satisfy strict monotonicity.
 
 All four conjectures are false. Their disproofs and proof references are:
 
@@ -46,6 +51,8 @@ This repository contributes the following:
    by restricting any proposed half-line monotonicity to $`[-1,1]`$.
 
 **Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F42dabed0c50511040a5c72b80c81593ba58fd82e%2Flean4web%2FBapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
+The link opens the published revision. The revised non-diagonal Conjecture 2
+is in the local [Lean4Web file](lean4web/BapatLalLean4Web.lean).
 
 ## Formal Conjectures targets
 
@@ -76,12 +83,14 @@ The Conjecture 2 target is:
 theorem BapatLal.qPermanentHalfLineMonotonicity :
     answer(False) ↔
       ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ),
-        A.PosDef →
+        A.PosDef → ¬ A.IsDiag →
           ∃ ε : ℝ, ε < -1 ∧
             StrictMonoOn (fun q : ℝ => (A.qPermanent q).re) (Set.Ioi ε)
 ```
 
 Its complete proof is [Bapat/DaFonseca.lean](lean/Bapat/DaFonseca.lean).
+Both targets require `¬ A.IsDiag`. The Conjecture 2 proof passes this hypothesis
+to the same order-144 counterexample used for Conjecture 1.
 
 The shared definitions are:
 
@@ -222,6 +231,12 @@ shared definitions and ordered certificates, and compiles the two FC statements
 with mathematical linters. It matches the complete Conjecture 1–2 proofs to their
 FC targets. Results are in
 [lean/evidence/build_results.json](lean/evidence/build_results.json).
+
+For the non-diagonal Conjecture 2 revision, the changed proof and FC module
+were built with `--wfail`; compiled target equality and the standard-three
+axiom closure were checked. The changed Lean4Web corollary was checked on
+`v4.35.0-rc3`. The full single-file build was not rerun for this revision;
+the saved full-build records predate it.
 
 Standalone Mathlib/Lean4Web version:
 
