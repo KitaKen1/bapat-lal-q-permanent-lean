@@ -3,8 +3,8 @@
 The Bapat–Lal q-permanent monotonicity conjecture is the following:
 
 > **Conjecture (Bapat–Lal).** For every non-diagonal Hermitian positive definite
-> complex matrix $A=(a_{ij})$ of size $n$, the function $q\mapsto P_q(A)$ is
-> strictly increasing on $[-1,1]$.
+> complex matrix $`A=(a_{ij})`$ of size $`n`$, the function $`q\mapsto P_q(A)`$ is
+> strictly increasing on $`[-1,1]`$.
 
 **This repository gives a complete Lean 4 proof that the conjecture is false.**
 This repository contributes the following:
@@ -61,83 +61,83 @@ See [FClikelean/](FClikelean/) for the statement and PR draft.
 
 This sketch follows the mathematical identities established by the Lean proof.
 
-**Setting.** Let $V$ be the $144\times2$ matrix whose ordered rows are
-$(a_i,b_i)$, with $a_i\in\mathbb Z$ and $b_i\in\mathbb Z[i]$, supplied in
-[the certificate](lean/Bapat/Certificate.lean). Put $H=VV^*$ and define
+**Setting.** Let $`V`$ be the $`144\times2`$ matrix whose ordered rows are
+$`(a_i,b_i)`$, with $`a_i\in\mathbb Z`$ and $`b_i\in\mathbb Z[i]`$, supplied in
+[the certificate](lean/Bapat/Certificate.lean). Put $`H=VV^*`$ and define
 
-$$
+```math
 p(z)=\prod_{i=0}^{143}(a_i+b_i z),\qquad
  g(z)=\sum_{i=0}^{143}(143-2i)b_i\prod_{j\ne i}(a_j+b_j z).
-$$
+```
 
-For a polynomial $f$, use the weighted coefficient norm
+For a polynomial $`f`$, use the weighted coefficient norm
 
-$$
+```math
 \|f\|_m^2=\sum_{k=0}^{m}k!(m-k)!\,|[z^k]f|^2.
-$$
+```
 
-Write $P=\|p\|_{144}^2$ and $S=\|g\|_{142}^2$.
+Write $`P=\|p\|_{144}^2`$ and $`S=\|g\|_{142}^2`$.
 
-**Lemma 1 (Gram permanent).** $\operatorname{per}(H)=P$.
+**Lemma 1 (Gram permanent).** $`\mathrm{per}(H)=P`$.
 
 *Proof sketch.* Expand each Gram entry into its two coordinates. Group the
-resulting terms by the number $k$ of rows choosing the second coordinate.
-There are $k!(144-k)!$ permutations matching each pair of such choices. The two
-coefficient sums are complex conjugates, giving $|[z^k]p|^2$.
+resulting terms by the number $`k`$ of rows choosing the second coordinate.
+There are $`k!(144-k)!`$ permutations matching each pair of such choices. The two
+coefficient sums are complex conjugates, giving $`|[z^k]p|^2`$.
 This identity is proved for general two-coordinate factors in
 [RankTwoPermanent.lean](lean/Bapat/RankTwoPermanent.lean).
 
 **Lemma 2 (endpoint derivative).**
 
-$$
+```math
 2\left.\frac{d}{dq}P_q(H)\right|_{q=1}=10296P-S,
 \qquad 10296=\binom{144}{2}.
-$$
+```
 
-*Proof sketch.* Differentiating the permutation sum at $q=1$ weights each
+*Proof sketch.* Differentiating the permutation sum at $`q=1`$ weights each
 monomial by its inversion count. For each ordered row pair, swapping the two
-rows pairs ascending and descending images. Their difference is a $2\times2$
+rows pairs ascending and descending images. Their difference is a $`2\times2`$
 minor times the product over the remaining rows. This gives a general identity
 between the endpoint derivative, the permanent, and the sum of paired minors.
 
-For $H=VV^*$, the minors factor into row wedges. Applying Lemma 1 to the
+For $`H=VV^*`$, the minors factor into row wedges. Applying Lemma 1 to the
 complementary rows turns their aggregate into the weighted coefficient norm of
 
-$$
+```math
 F(z)=\sum_{i<j}(a_i b_j-a_j b_i)
                  \prod_{r\notin\{i,j\}}(a_r+b_r z).
-$$
+```
 
-The product rule gives $F=-g$, so its squared norm is $S$.
+The product rule gives $`F=-g`$, so its squared norm is $`S`$.
 [PairMinorIdentity.lean](lean/Bapat/PairMinorIdentity.lean),
 [ComplementPermanent.lean](lean/Bapat/ComplementPermanent.lean), and
 [WedgePolynomial.lean](lean/Bapat/WedgePolynomial.lean) establish these steps.
 
-**Lemma 3 (exact arithmetic).** $P>0$ and $S>10300P$.
+**Lemma 3 (exact arithmetic).** $`P>0`$ and $`S>10300P`$.
 
-*Proof sketch.* Multiplying the linear factors recursively computes $p$ and
-$g$ over the Gaussian integers. Lean's kernel checks the resulting coefficient
-lists, their weighted norms, and the final inequality. The stored $P$ has 768
-decimal digits and $S$ has 772; their values are verified from the rows.
-Consequently $10296P-S<0$, and Lemma 2 gives a negative endpoint derivative.
+*Proof sketch.* Multiplying the linear factors recursively computes $`p`$ and
+$`g`$ over the Gaussian integers. Lean's kernel checks the resulting coefficient
+lists, their weighted norms, and the final inequality. The stored $`P`$ has 768
+decimal digits and $`S`$ has 772; their values are verified from the rows.
+Consequently $`10296P-S<0`$, and Lemma 2 gives a negative endpoint derivative.
 
-**Theorem (positive definite counterexample).** There are $\varepsilon>0$ and
-$-1\le q_1<q_2\le1$ such that $A=H+\varepsilon I$ is Hermitian positive definite,
-non-diagonal, and $P_{q_2}(A)<P_{q_1}(A)$.
+**Theorem (positive definite counterexample).** There are $`\varepsilon>0`$ and
+$`-1\le q_1<q_2\le1`$ such that $`A=H+\varepsilon I`$ is Hermitian positive definite,
+non-diagonal, and $`P_{q_2}(A)<P_{q_1}(A)`$.
 
-*Proof sketch.* A Gram matrix is positive semidefinite, so $H+\varepsilon I$ is
-positive definite for every positive $\varepsilon$. The endpoint derivative is
-continuous in $\varepsilon$ and negative at zero, hence remains negative for
-some positive $\varepsilon$. The entry $H_{0,1}=9795-1288i$ remains unchanged by
-the diagonal perturbation and proves that $A$ is non-diagonal. A differentiable
-function that is monotone on $[-1,1]$ has a nonnegative derivative at the right
+*Proof sketch.* A Gram matrix is positive semidefinite, so $`H+\varepsilon I`$ is
+positive definite for every positive $`\varepsilon`$. The endpoint derivative is
+continuous in $`\varepsilon`$ and negative at zero, hence remains negative for
+some positive $`\varepsilon`$. The entry $`H_{0,1}=9795-1288i`$ remains unchanged by
+the diagonal perturbation and proves that $`A`$ is non-diagonal. A differentiable
+function that is monotone on $`[-1,1]`$ has a nonnegative derivative at the right
 endpoint. The negative derivative therefore yields the stated strict decrease.
 
 **In Lean.** The main shortcuts are an endpoint derivative instead of a full
 q-polynomial expansion, counts of permutations preserving two colours, and a
 product-rule identity for the wedge polynomial. Polynomial coefficient
-recurrences take $O(n^2)$ Gaussian-integer operations, rather than enumerating
-$144!$ permutations; this count excludes the growing bit cost of arithmetic.
+recurrences take $`O(n^2)`$ Gaussian-integer operations, rather than enumerating
+$`144!`$ permutations; this count excludes the growing bit cost of arithmetic.
 Continuity supplies the perturbation existentially, without a prescribed
 perturbation size or a second-derivative estimate. The large certificate
 computations use `decide +kernel`, and the combinatorial and analytic identities
@@ -241,8 +241,8 @@ This formalization, mathematical exploration, proof development, and documentati
 
 ## Appendix: history and related work (AI generated)
 
-The q-permanent has $P_{-1}(A)=\det(A)$, $P_0(A)=\prod_i a_{ii}$, and
-$P_1(A)=\operatorname{per}(A)$. Bapat–Lal monotonicity asks whether this entire
+The q-permanent has $`P_{-1}(A)=\det(A)`$, $`P_0(A)=\prod_i a_{ii}`$, and
+$`P_1(A)=\mathrm{per}(A)`$. Bapat–Lal monotonicity asks whether this entire
 interpolation rises strictly for every non-diagonal Hermitian positive definite
 matrix. [da Fonseca 2018](https://arxiv.org/abs/1804.02231) surveys its origins
 and states the original conjecture separately from the extension to a larger
@@ -265,5 +265,5 @@ These are earlier mathematical results, summarized in
 [Mitchell's paper](https://files.ele-math.com/articles/oam-14-56.pdf).
 
 The present proof uses a two-coordinate Gram matrix and a negative derivative
-at $q=1$. Adding a sufficiently small positive multiple of the identity then
+at $`q=1`$. Adding a sufficiently small positive multiple of the identity then
 reaches the positive definite class required by the original conjecture.
