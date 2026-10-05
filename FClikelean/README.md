@@ -19,7 +19,7 @@ The shared definitions are copied verbatim in
 [Bapat/Statement.lean](../lean/Bapat/Statement.lean).
 `python3 lean/scripts/build_audit.py` checks both complete proofs, FC linters,
 compiled target types, and the standard-three axiom closure.
-The FC statements use `by sorry`. Conjecture 1 links to its published complete proof.
-Conjecture 2 has a complete local proof; its `formal_proof` link is filled after publication.
-After publishing the updated proof repository, run `fill_links.py` with its
-public commit to point Conjecture 2 directly to its corollary.
+The FC statements use `by sorry`, with `formal_proof` links pointing directly
+to the two published complete Lean proofs at a fixed commit.
+Run `fill_links.py` with a public commit to refresh the fixed-commit proof
+and Lean4Web links after later proof updates.

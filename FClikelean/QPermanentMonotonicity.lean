@@ -61,7 +61,7 @@ namespace BapatLal
 non-diagonal Hermitian positive definite matrix
 strictly increasing for $q \in [-1,1]$? The answer is negative [Ki26]. -/
 @[category research solved, AMS 15,
-    formal_proof using lean4 at "https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/283f0eaf0084a63366da27dd515ce913d7afbcef/lean/Bapat/Main.lean#L25"]
+    formal_proof using lean4 at "https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/Main.lean#L25"]
 theorem qPermanentMonotonicity :
     answer(False) ↔
       ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ),
@@ -72,7 +72,8 @@ theorem qPermanentMonotonicity :
 /-- Conjecture 2 in [dF18, Section 4]: does every Hermitian positive definite matrix
 have some $ε < -1$ on whose half-line $(ε, ∞)$ its q-permanent is strictly increasing?
 The answer is negative [Ki26], by the same counterexample as Conjecture 1. -/
-@[category research solved, AMS 15]
+@[category research solved, AMS 15,
+    formal_proof using lean4 at "https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/DaFonseca.lean#L18"]
 theorem qPermanentHalfLineMonotonicity :
     answer(False) ↔
       ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ),

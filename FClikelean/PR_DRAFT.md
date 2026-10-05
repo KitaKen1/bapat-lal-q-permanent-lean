@@ -10,7 +10,7 @@ with `answer(False)` and `category research solved, AMS 15`.
 refutes Conjecture 1 with an order-144 Hermitian
 positive definite non-diagonal counterexample on `[-1,1]`.
 Conjecture 2 follows because every half-line `(ε,∞)` with `ε < -1`
-contains `[-1,1]`. The complete local proof includes both theorem types.
+contains `[-1,1]`. The published complete proof includes both theorem types.
 
 The module docstring also records two related solved conjectures in Section 5:
 
@@ -22,10 +22,10 @@ The module docstring also records two related solved conjectures in Section 5:
 
 The two formal theorem declarations in this PR concern Conjectures 1 and 2.
 
-Proof: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/283f0eaf0084a63366da27dd515ce913d7afbcef/lean/Bapat/Main.lean#L25
-Half-line proof (local): [Bapat/DaFonseca.lean](../lean/Bapat/DaFonseca.lean)
+Proof: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/Main.lean#L25
+Half-line proof: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/DaFonseca.lean#L18
 Repository: https://github.com/KitaKen1/bapat-lal-q-permanent-lean
-Lean4Web: [open in your browser](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean) (v4.35.0-rc3)
+Lean4Web: [open in your browser](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F42dabed0c50511040a5c72b80c81593ba58fd82e%2Flean4web%2FBapatLalLean4Web.lean) (v4.35.0-rc3)
 
 Validation: `python3 lean/scripts/build_audit.py` builds both complete proof
 versions, checks FC linters and the two compiled targets, and audits the
@@ -38,5 +38,5 @@ AI Usage Disclosure: This formalization, mathematical exploration, proof develop
 Local editing notes: replace the file in the existing PR branch with
 `QPermanentMonotonicity.lean`, using the standard FC copyright header.
 Then use **Edit** on PR #6857 to replace the title and body with the text above.
-Publish the updated proof repository first and run `fill_links.py` with its
-public commit to replace the local half-line proof link and update Lean4Web.
+The proof links are fixed to a public commit containing both complete proofs
+and the updated Lean4Web file.
