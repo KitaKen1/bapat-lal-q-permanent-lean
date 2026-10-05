@@ -1,13 +1,13 @@
 {
   "status": "PASS",
-  "checked_at": "2026-10-05T00:29:02.454135+00:00",
+  "checked_at": "2026-10-05T02:42:04.399212+00:00",
   "exit_codes": {
     "main_proof": 0,
     "lean4web": 0,
     "fc_statement": 0,
     "compiled_target": 0
   },
-  "elapsed_seconds": 219.85,
+  "elapsed_seconds": 82.59,
   "timing_note": "Includes dependency loading and cached modules.",
   "lean_version": "leanprover/lean4:v4.33.1",
   "lean4web_version": "leanprover/lean4:v4.35.0-rc3",
@@ -52,7 +52,7 @@
     "lean/Bapat/Statement.lean": "8839e77178fe173b98fbcb9b7b55fac7a4ca7f6bfde53b206f9cf3b5174ce932",
     "lean/Bapat/WedgePolynomial.lean": "75d4497d1e4a1a948fddc6810370b3ee08ba09bce5aacae6ae3af7de3785fc8e",
     "lean/Bapat/Witness.lean": "5c6111c3618998e002aed81340b7378fd05ccb548b82e101d8fe476268127101",
-    "lean4web/BapatLalLean4Web.lean": "c3f0e42af6ce3047ff5fbabe07544abe46dfcd0740532d8af8c9fa2f230b93d6",
-    "FClikelean/QPermanentMonotonicity.lean": "07e1ecf4e24a9d86ca9ad9ce80caaa383c0f029e02c349b68dcc8dadc19ff5f3"
+    "lean4web/BapatLalLean4Web.lean": "ffc4da91abb5d41c4f2af3561ce0a795ae105d79db862b6a4d25222e469ced55",
+    "FClikelean/QPermanentMonotonicity.lean": "d08920fd594afe7381312c80e98304a3f57cb5f641503e6992d02d7ce6d2f345"
   }
 }

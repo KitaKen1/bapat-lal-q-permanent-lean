@@ -30,7 +30,8 @@ namespace BapatLal
 
 /-- Is the $q$-permanent of every non-diagonal Hermitian positive definite matrix
 strictly increasing for $q \in [-1,1]$? The answer is negative. -/
-@[category research solved, AMS 15]
+@[category research solved, AMS 15,
+    formal_proof using lean4 at "https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/283f0eaf0084a63366da27dd515ce913d7afbcef/lean/Bapat/Main.lean#L25"]
 theorem qPermanentMonotonicity :
     answer(False) ↔
       ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ),

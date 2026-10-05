@@ -16,7 +16,7 @@ This repository contributes the following:
    [Bapat/Main.lean](lean/Bapat/Main.lean) proves the proposed FC theorem using
    FC's actual `answer` elaborator and identical shared definitions.
 
-**Try it in Lean4Web:** [open the complete proof in one file](lean4web/BapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
+**Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
 
 ## Formal Conjectures target
 
@@ -195,8 +195,8 @@ The complete proof sources have no `sorry`, `admit`, custom axiom or
 
 The pinned Mathlib commits are `0df444a360eaa60ab8c11dca51a86af692955474`
 for the FC project and `5e0c4e5239cb0a2d86d68a884bf52cfd963fce22` for Lean4Web.
-After publication, `python3 lean/scripts/fill_links.py REPOSITORY_URL FULL_COMMIT_SHA`
-fills the fixed-commit proof and Lean4Web links.
+`python3 lean/scripts/fill_links.py REPOSITORY_URL FULL_COMMIT_SHA`
+updates the fixed-commit proof and Lean4Web links.
 
 ## Status boundary
 

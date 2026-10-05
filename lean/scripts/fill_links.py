@@ -33,8 +33,11 @@ text = re.sub(r"(\*\*Try it in Lean4Web:\*\* \[open the complete proof in one fi
 readme.write_text(text)
 fc = ROOT / "FClikelean/QPermanentMonotonicity.lean"
 text = re.sub(r'@\[formal_proof using lean4 at "[^"]+"\]\n', "", fc.read_text())
-text = text.replace("@[category research solved, AMS 15]",
-                    f'@[formal_proof using lean4 at "{proof}"]\n@[category research solved, AMS 15]')
+text = re.sub(
+    r'@\[category research solved, AMS 15(?:,\s*formal_proof using lean4 at "[^"]+")?\]',
+    lambda _: f'@[category research solved, AMS 15,\n    formal_proof using lean4 at "{proof}"]',
+    text,
+)
 fc.write_text(text)
 draft = ROOT / "FClikelean/PR_DRAFT.md"
 text = draft.read_text()

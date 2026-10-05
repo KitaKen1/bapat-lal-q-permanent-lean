@@ -13,9 +13,9 @@ order-144 positive definite counterexample with a strict decrease inside
 perturbation. The final theorem depends only on
 `propext`, `Classical.choice`, and `Quot.sound`.
 
-Proof: to be filled after publication.
-Repository: to be filled after publication.
-Lean4Web: to be filled after publication.
+Proof: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/283f0eaf0084a63366da27dd515ce913d7afbcef/lean/Bapat/Main.lean#L25
+Repository: https://github.com/KitaKen1/bapat-lal-q-permanent-lean
+Lean4Web: https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean
 
 Validation: `python3 lean/scripts/build_audit.py` builds both complete proofs,
 compiles this statement with FC's mathematical linters, compares the definitions and compiled
@@ -23,6 +23,6 @@ target types, and audits the final axioms.
 
 AI Usage Disclosure: This formalization, mathematical exploration, proof development, and documentation were produced by Kenta Kitamura with assistance from ChatGPT and OpenAI Codex using GPT-6 Astra and GPT-6.1 sol, and Claude Code using Claude Opus 5.5.
 
-Before submitting, fill the links and copy `QPermanentMonotonicity.lean` to
+Before submitting, copy `QPermanentMonotonicity.lean` to
 `FormalConjectures/Arxiv/1804.02231/QPermanentMonotonicity.lean` in FC,
 using the standard FC copyright header.

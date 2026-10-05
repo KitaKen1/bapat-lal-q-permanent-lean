@@ -12,5 +12,6 @@ the complete proof has no holes.
 
 `python3 lean/scripts/build_audit.py` builds both proofs, checks the axioms,
 compares the definitions and theorem types, and compiles this statement with FC linters (excluding the repository-specific copyright header).
-After publication, `lean/scripts/fill_links.py` adds the fixed-commit proof link.
+The `formal_proof` attribute links to the complete proof at a fixed commit.
+`lean/scripts/fill_links.py` updates the publication links.
 [PR_DRAFT.md](PR_DRAFT.md) is the submission draft.
