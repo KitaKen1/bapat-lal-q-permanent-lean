@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-05T00:29:02.454135+00:00",
+  "exit_codes": {
+    "main_proof": 0,
+    "lean4web": 0,
+    "fc_statement": 0,
+    "compiled_target": 0
+  },
+  "elapsed_seconds": 219.85,
+  "timing_note": "Includes dependency loading and cached modules.",
+  "lean_version": "leanprover/lean4:v4.33.1",
+  "lean4web_version": "leanprover/lean4:v4.35.0-rc3",
+  "axiom_audit_passed": true,
+  "axioms": {
+    "main_proof": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "lean4web": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "compiled_target": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "definitions_and_statements_match": true,
+  "certificate_copies_match": true,
+  "source_sha256": {
+    "lean/Bapat.lean": "01cacb8aac8fb11dc8befc6e5aa25a3bf21c86cfda1d1e166ec15566599304c1",
+    "lean/Bapat/Basic.lean": "57d7250d53fa219c03c4e2ca331fef9cb865f4f1932266869df929903df54459",
+    "lean/Bapat/Certificate.lean": "388c39bb5d65c7ab17e81ea5a203300b49213a2f3f3ed217c1ae90efc64d2ea6",
+    "lean/Bapat/CoefficientAlgebra.lean": "ae4b20d9c9150a919ee34f10357cb5798969ca6ef7c00edc6a6084567fd6c373",
+    "lean/Bapat/ColorCount.lean": "8a132e8187d83306eacd047ec8ba20ca026eb2eee6963c8f85acf87663daad71",
+    "lean/Bapat/ComplementPermanent.lean": "e5206b82133021070e501082bafff006e66924568957eb797472b9b8ca281fbe",
+    "lean/Bapat/Counterexample.lean": "c94ef38633630a0ba6dd10c36f80a923ef9ecc8d57cddfd5807a028b868cfafd",
+    "lean/Bapat/Main.lean": "2b27b0b6e2f612bba072eac8f510e07f2aff933c99cce2bca44486b4e0c0cd38",
+    "lean/Bapat/NormCertificate.lean": "6067a71e8faed525a350ef9263199e82556240a78f7201d8c0bbc925f19cb7dd",
+    "lean/Bapat/PairMinorIdentity.lean": "d70bf1fbb749c6b71466140d1aa4f82d053f549ad59cb088b2c238ec5658bef4",
+    "lean/Bapat/PairPolynomial.lean": "8c6571f563d0c233aa4443c5d72c3a7c4d94aa5dbb3bcecf91350655d9fd8295",
+    "lean/Bapat/PermanentCertificate.lean": "afa1f5ceac4401c70fdededadf6c9a8df1310f7c6f33b26bd211718bb44910d1",
+    "lean/Bapat/PermutationReality.lean": "01164fa991069393134fdc0576539b6f0ef353964a0a092d4c9556e2401446e3",
+    "lean/Bapat/PolynomialCertificate.lean": "efd97ab9ad0524e01d807d41e759e4cac364aa4f6b355932d88fafe50500a422",
+    "lean/Bapat/RankTwoPermanent.lean": "54e34c11010726d5e3f1630edce96f071d63d663b628ef296471ee65cfb7cb02",
+    "lean/Bapat/RankTwoReduction.lean": "24dcfc8c2c6ea523d489930554d7b41ce8603977970d5c1276f27eb5488c1541",
+    "lean/Bapat/Shape.lean": "90fef7a3265dff1d5d9f8ea0896298c9ef559766ac81fcf8b02428474e3b0072",
+    "lean/Bapat/Statement.lean": "8839e77178fe173b98fbcb9b7b55fac7a4ca7f6bfde53b206f9cf3b5174ce932",
+    "lean/Bapat/WedgePolynomial.lean": "75d4497d1e4a1a948fddc6810370b3ee08ba09bce5aacae6ae3af7de3785fc8e",
+    "lean/Bapat/Witness.lean": "5c6111c3618998e002aed81340b7378fd05ccb548b82e101d8fe476268127101",
+    "lean4web/BapatLalLean4Web.lean": "c3f0e42af6ce3047ff5fbabe07544abe46dfcd0740532d8af8c9fa2f230b93d6",
+    "FClikelean/QPermanentMonotonicity.lean": "07e1ecf4e24a9d86ca9ad9ce80caaa383c0f029e02c349b68dcc8dadc19ff5f3"
+  }
+}

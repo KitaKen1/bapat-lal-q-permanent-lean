@@ -1,0 +1,113 @@
+
+main_proof: lake --wfail build Bapat
+ℹ [8934/8955] Replayed Bapat.ColorCount
+info: Bapat/ColorCount.lean:112:0: 'Bapat.colorMatching_card_ite' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8935/8955] Replayed Bapat.Basic
+info: Bapat/Basic.lean:114:0: 'Bapat.not_bapatMonotonicity_of_psd_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8936/8955] Replayed Bapat.PermutationReality
+info: Bapat/PermutationReality.lean:95:0: 'Bapat.complexQPermanent_eq_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8937/8955] Replayed Bapat.RankTwoPermanent
+info: Bapat/RankTwoPermanent.lean:127:0: 'Bapat.gram_permanent_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8938/8955] Replayed Bapat.PairMinorIdentity
+info: Bapat/PairMinorIdentity.lean:145:0: 'Bapat.endpointDerivative_pairMinorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/PairMinorIdentity.lean:146:0: 'Bapat.rowPairs_144_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8939/8955] Replayed Bapat.Certificate
+info: Bapat/Certificate.lean:221:0: 'Bapat.Certificate.exact_coefficients' does not depend on any axioms
+info: Bapat/Certificate.lean:222:0: 'Bapat.Certificate.strict_margin' does not depend on any axioms
+info: Bapat/Certificate.lean:223:0: 'Bapat.Certificate.endpoint_numerator_negative' does not depend on any axioms
+ℹ [8940/8955] Replayed Bapat.CoefficientAlgebra
+info: Bapat/CoefficientAlgebra.lean:111:0: 'Bapat.Certificate.asPolynomial_mulLinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/CoefficientAlgebra.lean:112:0: 'Bapat.Certificate.asPolynomial_weighted_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8941/8955] Replayed Bapat.Shape
+info: Bapat/Shape.lean:14:0: 'Bapat.Certificate.coefficient_shape' does not depend on any axioms
+ℹ [8942/8955] Replayed Bapat.PolynomialCertificate
+info: Bapat/PolynomialCertificate.lean:107:0: 'Bapat.Certificate.certificate_polynomials' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8943/8955] Replayed Bapat.NormCertificate
+info: Bapat/NormCertificate.lean:59:0: 'Bapat.Certificate.expectedP_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/NormCertificate.lean:60:0: 'Bapat.Certificate.expectedS_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8944/8955] Replayed Bapat.WedgePolynomial
+info: Bapat/WedgePolynomial.lean:127:0: 'Bapat.Certificate.certificate_wedgePolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/WedgePolynomial.lean:128:0: 'Bapat.Certificate.certificate_wedgeNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8945/8955] Replayed Bapat.Witness
+info: Bapat/Witness.lean:63:0: 'Bapat.gramWitness_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Witness.lean:64:0: 'Bapat.explicitPositiveWitness_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Witness.lean:65:0: 'Bapat.not_bapatMonotonicity_of_endpoint_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8946/8955] Replayed Bapat.RankTwoReduction
+info: Bapat/RankTwoReduction.lean:58:0: 'Bapat.rankTwoGram_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/RankTwoReduction.lean:59:0: 'Bapat.not_bapatMonotonicity_of_rankTwo_norms' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8947/8955] Replayed Bapat.ComplementPermanent
+info: Bapat/ComplementPermanent.lean:162:0: 'Bapat.pairMatchingFinEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/ComplementPermanent.lean:163:0: 'Bapat.remainingGram_matching_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/ComplementPermanent.lean:268:0: 'Bapat.pairMinorGram_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8948/8955] Replayed Bapat.PairPolynomial
+info: Bapat/PairPolynomial.lean:190:0: 'Bapat.pairPolynomial_gramFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/PairPolynomial.lean:192:0: 'Bapat.pairPolynomial_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/PairPolynomial.lean:193:0: 'Bapat.Certificate.weightedBy_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8949/8955] Replayed Bapat.PermanentCertificate
+info: Bapat/PermanentCertificate.lean:55:0: 'Bapat.gramWitness_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/PermanentCertificate.lean:56:0: 'Bapat.gramWitness_permanent_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/PermanentCertificate.lean:57:0: 'Bapat.not_bapatMonotonicity_of_minor_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8950/8955] Replayed Bapat.Counterexample
+info: Bapat/Counterexample.lean:85:0: 'Bapat.gramWitness_minorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Counterexample.lean:86:0: 'Bapat.gramWitness_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Counterexample.lean:87:0: 'Bapat.exists_positive_definite_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Counterexample.lean:88:0: 'Bapat.not_bapatMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Counterexample.lean:89:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8953/8955] Replayed Bapat.Main
+info: Bapat/Main.lean:38:0: 'BapatLal.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/Main.lean:39:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8955 jobs).
+Exit code: 0
+
+lean4web: lake --wfail build BapatLalLean4Web
+ℹ [8959/8960] Replayed BapatLalLean4Web
+info: BapatLalLean4Web.lean:16:0: "4.35.0-rc3"
+info: BapatLalLean4Web.lean:138:0: 'Bapat.colorMatching_card_ite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:246:0: 'Bapat.not_bapatMonotonicity_of_psd_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:342:0: 'Bapat.complexQPermanent_eq_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:470:0: 'Bapat.gram_permanent_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:617:0: 'Bapat.endpointDerivative_pairMinorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:618:0: 'Bapat.rowPairs_144_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:843:0: 'Bapat.Certificate.exact_coefficients' depends on axioms: [propext]
+info: BapatLalLean4Web.lean:844:0: 'Bapat.Certificate.strict_margin' does not depend on any axioms
+info: BapatLalLean4Web.lean:845:0: 'Bapat.Certificate.endpoint_numerator_negative' does not depend on any axioms
+info: BapatLalLean4Web.lean:954:0: 'Bapat.Certificate.asPolynomial_mulLinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:955:0: 'Bapat.Certificate.asPolynomial_weighted_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:973:0: 'Bapat.Certificate.coefficient_shape' does not depend on any axioms
+info: BapatLalLean4Web.lean:1082:0: 'Bapat.Certificate.certificate_polynomials' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1143:0: 'Bapat.Certificate.expectedP_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1144:0: 'Bapat.Certificate.expectedS_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1274:0: 'Bapat.Certificate.certificate_wedgePolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1275:0: 'Bapat.Certificate.certificate_wedgeNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1341:0: 'Bapat.gramWitness_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1342:0: 'Bapat.explicitPositiveWitness_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1343:0: 'Bapat.not_bapatMonotonicity_of_endpoint_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1403:0: 'Bapat.rankTwoGram_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1404:0: 'Bapat.not_bapatMonotonicity_of_rankTwo_norms' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1568:0: 'Bapat.pairMatchingFinEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1569:0: 'Bapat.remainingGram_matching_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1674:0: 'Bapat.pairMinorGram_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1867:0: 'Bapat.pairPolynomial_gramFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1869:0: 'Bapat.pairPolynomial_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1870:0: 'Bapat.Certificate.weightedBy_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1928:0: 'Bapat.gramWitness_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1929:0: 'Bapat.gramWitness_permanent_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:1930:0: 'Bapat.not_bapatMonotonicity_of_minor_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2018:0: 'Bapat.gramWitness_minorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2019:0: 'Bapat.gramWitness_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2020:0: 'Bapat.exists_positive_definite_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2021:0: 'Bapat.not_bapatMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2022:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2063:0: 'BapatLal.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BapatLalLean4Web.lean:2064:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8960 jobs).
+Exit code: 0
+
+fc_statement: lean -DautoImplicit=false -Dwarn.sorry=false -DwarningAsError=true -Dweak.linter.style.namespace=true -Dweak.linter.style.stubs=true -Dweak.linter.style.openClassical=true -Dweak.linter.style.ams_attribute=true -Dweak.linter.style.category_attribute=true -Dweak.linter.style.category_answer=true -Dweak.linter.style.conditional_formal_proof=true -Dweak.linter.style.moduleDocstring=true -Dweak.linter.style.latex_docstring=true -Dweak.linter.style.imports=true -R .lake ./lean/.lake/FCStatement.lean -o .lake/FCStatement.olean
+Exit code: 0
+
+compiled_target: lean -DwarningAsError=true -R .lake ./lean/.lake/FCTypeCheck.lean
+'BapatFCValidation.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+Compiled FC target and complete proof have definitionally equal types
+Exit code: 0

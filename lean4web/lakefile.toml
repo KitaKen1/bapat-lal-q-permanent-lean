@@ -1,0 +1,14 @@
+name = "bapat_lal_lean4web"
+version = "0.1.0"
+defaultTargets = ["BapatLalLean4Web"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "5e0c4e5239cb0a2d86d68a884bf52cfd963fce22"
+
+[[lean_lib]]
+name = "BapatLalLean4Web"
