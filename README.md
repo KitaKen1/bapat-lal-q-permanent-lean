@@ -104,7 +104,7 @@ For $`H=VV^*`$, the minors factor into row wedges. Applying Lemma 1 to the
 complementary rows turns their aggregate into the weighted coefficient norm of
 
 ```math
-F(z)=\sum_{i<j}(a_i b_j-a_j b_i)
+F(z)=\sum_{i\lt j}(a_i b_j-a_j b_i)
                  \prod_{r\ne i,\;r\ne j}(a_r+b_r z).
 ```
 
