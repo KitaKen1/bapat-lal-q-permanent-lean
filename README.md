@@ -1,29 +1,63 @@
-# A Lean disproof of the Bapat–Lal q-permanent monotonicity conjecture
+# Lean proofs of q-permanent Conjectures 1 and 2
 
-The Bapat–Lal q-permanent monotonicity conjecture is the following:
+The four q-permanent conjectures stated in [da Fonseca's survey](https://arxiv.org/abs/1804.02231) are the following.
 
-> **Conjecture (Bapat–Lal).** For every non-diagonal Hermitian positive definite
-> complex matrix $`A=(a_{ij})`$ of size $`n`$, the function $`q\mapsto P_q(A)`$ is
-> strictly increasing on $`[-1,1]`$.
+> **Conjecture 1 (Bapat–Lal).** For every non-diagonal Hermitian positive definite
+> complex matrix $`A=(a_{ij})`$ of order $`n`$, the function $`q\mapsto P_q(A)`$
+> is strictly increasing on $`[-1,1]`$.
 
-**This repository gives a complete Lean 4 proof that the conjecture is false.**
+> **Conjecture 2 (da Fonseca).** For every Hermitian positive definite complex
+> matrix $`A`$, there exists $`ε < -1`$ such that $`q\mapsto P_q(A)`$ is strictly
+> increasing on $`(ε,\infty)`$.
+
+> **Conjecture 3 (Bapat–Lal).** For every Hermitian positive semidefinite complex
+> matrix $`A=(a_{ij})`$ of order $`n`$, every $`q\in[0,1]`$, and every nonempty
+> subset $`S\subseteq\{1,\ldots,n\}`$,
+> $`P_q(A)\geq\sum_{\sigma\in S_n,\ \sigma(S)=S}q^{\ell(\sigma)}\prod_{i=1}^{n}a_{i,\sigma(i)}`$.
+> The sum is over permutations preserving $`S`$ setwise, and $`\ell(\sigma)`$
+> counts inversions in the full original ordering.
+
+> **Conjecture 4 (Bapat–Lal).** For every Hermitian positive semidefinite complex
+> matrix $`A=(a_{ij})`$ of order $`n`$ and every $`q\in[0,1]`$, the largest
+> eigenvalue of the q-Schur power matrix $`\Pi_q(A)`$ equals $`P_q(A)`$.
+> Its rows and columns are indexed by permutations $`\sigma,\tau\in S_n`$,
+> with entries $`(\Pi_q(A))_{\sigma,\tau}=q^{\ell(\tau\sigma^{-1})}\prod_{i=1}^{n}a_{\sigma(i),\tau(i)}`$.
+
+All four conjectures are false. Their disproofs and proof references are:
+
+| Conjecture | Answer | Mathematical disproof | Lean formalization |
+|---|---|---|---|
+| 1 | False | This repository: order-144 counterexample | [This repository](lean/Bapat/Main.lean) |
+| 2 | False | This repository: corollary of Conjecture 1 | [This repository](lean/Bapat/DaFonseca.lean) |
+| 3 | False | Matthew J. Colbrook | [George Stepaniants](https://github.com/sgstepaniants/OpenProblemsInNLA/blob/cd44ce9bcb84ebc79a1aa934918d1f76b2a9c6e7/matrix-inequalities-and-norms/MI-19/lean/Solution.lean) |
+| 4 | False | [Valery S. Shchesnovich (2016)](https://doi.org/10.1016/j.laa.2015.10.034); [Tran Hoang Anh (2021), simpler example](https://arxiv.org/abs/2101.03428) | Published mathematical disproof |
+
 This repository contributes the following:
 
-1. **A statement in the format of Formal Conjectures.**
-   [FClikelean/](FClikelean/) contains the proposed registration files for the
-   Bapat–Lal conjecture and its negative answer.
-2. **A complete Lean 4 proof.**
-   [Bapat/Main.lean](lean/Bapat/Main.lean) proves the proposed FC theorem using
-   FC's actual `answer` elaborator and identical shared definitions.
+1. **Statements in the format of Formal Conjectures.**
+   [FClikelean/](FClikelean/) contains Conjectures 1 and 2 with their negative
+   answers. Its module docstring and PR edit draft record the known disproofs
+   of Conjectures 3 and 4 as related work.
+2. **Complete Lean 4 proof of Conjecture 1.**
+   [Bapat/Main.lean](lean/Bapat/Main.lean) disproves the conjecture with an
+   order-144 Hermitian positive definite non-diagonal counterexample.
+3. **Complete Lean 4 proof of Conjecture 2.**
+   [Bapat/DaFonseca.lean](lean/Bapat/DaFonseca.lean) derives the negative answer
+   by restricting any proposed half-line monotonicity to $`[-1,1]`$.
 
 **Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
 
-## Formal Conjectures target
+## Formal Conjectures targets
 
-The audited [Formal Conjectures commit](https://github.com/google-deepmind/formal-conjectures/tree/89294ea02bd7cd678d59984add52cb4baef3dbf4)
-does not contain this Bapat–Lal problem. The registration candidate is
-[FClikelean/QPermanentMonotonicity.lean](FClikelean/QPermanentMonotonicity.lean).
-It records Conjecture 1 as `category research solved, AMS 15`:
+[FClikelean/QPermanentMonotonicity.lean](FClikelean/QPermanentMonotonicity.lean)
+contains the two statements for Conjectures 1 and 2 with
+`category research solved, AMS 15`.
+Conjecture 1 is included in [PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
+Conjecture 2 is a corollary of the same order-144 counterexample.
+The module docstring and [PR edit draft](FClikelean/PR_DRAFT.md) cite the known
+solutions of Conjectures 3 and 4 as related work.
+
+The Conjecture 1 target is:
 
 ```lean
 theorem BapatLal.qPermanentMonotonicity :
@@ -35,6 +69,19 @@ theorem BapatLal.qPermanentMonotonicity :
 
 The complete proof in `lean/Bapat/Main.lean` has this exact statement and name.
 The answer sits outside all quantifiers.
+
+The Conjecture 2 target is:
+
+```lean
+theorem BapatLal.qPermanentHalfLineMonotonicity :
+    answer(False) ↔
+      ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ),
+        A.PosDef →
+          ∃ ε : ℝ, ε < -1 ∧
+            StrictMonoOn (fun q : ℝ => (A.qPermanent q).re) (Set.Ioi ε)
+```
+
+Its complete proof is [Bapat/DaFonseca.lean](lean/Bapat/DaFonseca.lean).
 
 The shared definitions are:
 
@@ -147,12 +194,11 @@ are proved.
 
 | Directory | Lean version | Purpose |
 |---|---|---|
-| [lean/](lean/) | `v4.33.1` | Complete FC-target proof, with Formal Conjectures pinned to `89294ea0` |
+| [lean/](lean/) | `v4.33.1` | Complete proofs of Conjectures 1–2, with Formal Conjectures pinned to `89294ea0` |
 | [lean4web/](lean4web/) | `v4.35.0-rc3` | Complete proof in one Mathlib-only file for Lean4Web |
-| [FClikelean/](FClikelean/) | FC `v4.33.1` | Registration candidate, shared definitions, and PR draft |
+| [FClikelean/](FClikelean/) | FC `v4.33.1` | Two FC statements, shared definitions, and PR edit draft |
 
-The complete project has 20 Lean source files, about 2,100 lines. Its entry point
-is [Bapat/Main.lean](lean/Bapat/Main.lean); the mathematical library is in
+The complete project's entry point is [Bapat.lean](lean/Bapat.lean); the mathematical library is in
 [lean/Bapat/](lean/Bapat/). The standalone edition has about 2,100 lines and is
 produced by [make_lean4web.py](lean/scripts/make_lean4web.py), which adapts the
 conditional-lemma names deprecated in Lean 4.35.
@@ -172,9 +218,9 @@ python3 scripts/build_audit.py
 ```
 
 The audit builds both proof versions, checks the final axioms, compares the
-shared definitions and ordered certificates, compiles the FC statement with
-its mathematical linters, and checks that the compiled target and complete proof have
-definitionally equal types. Results are in
+shared definitions and ordered certificates, and compiles the two FC statements
+with mathematical linters. It matches the complete Conjecture 1–2 proofs to their
+FC targets. Results are in
 [lean/evidence/build_results.json](lean/evidence/build_results.json).
 
 Standalone Mathlib/Lean4Web version:
@@ -215,9 +261,11 @@ The proof also does not determine the smallest counterexample dimension or give
 a counterexample restricted to real symmetric matrices.
 
 This repository records a formal disproof from the supplied certificate.
-Its FC target is the original interval `[-1,1]`; no separate FC statement for
-the half-line extension is included. The formalization was submitted to
-Formal Conjectures in [PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
+The local FC-style file and complete Lean proofs here cover Conjectures 1 and 2.
+The known solutions of Conjectures 3 and 4 are recorded in the module docstring,
+PR edit draft, and related-work references.
+[PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857) contains
+Conjecture 1.
 
 ## Sources
 
@@ -226,7 +274,7 @@ Formal Conjectures in [PR #6857](https://github.com/google-deepmind/formal-conje
   *Linear Algebra and its Applications* 197–198 (1994), 397–409.
 - [da Fonseca 2018] C. M. da Fonseca,
   [The mu-permanent revisited](https://arxiv.org/abs/1804.02231),
-  arXiv:1804.02231, Section 4, Conjecture 1.
+  arXiv:1804.02231, Section 4, Conjectures 1–2; Section 5, Conjectures 3–4.
 - [Mitchell 2020] L. Mitchell,
   [A note on Bapat's q-permanent conjecture](https://files.ele-math.com/articles/oam-14-56.pdf),
   *Operators and Matrices* 14 (2020), 915–919.
@@ -247,14 +295,37 @@ matrix. [da Fonseca 2018](https://arxiv.org/abs/1804.02231) surveys its origins
 and states the original conjecture separately from the extension to a larger
 interval.
 
+### Conjecture 3: Colbrook's counterexample and Stepaniants' Lean proof
+
+Conjecture 3 asks whether the full q-permanent dominates the sum over permutations
+preserving any nonempty subset. Matthew J. Colbrook supplied an order-four
+positive semidefinite counterexample at $`q=7/8`$. George Stepaniants formalized
+its negative answer as `NLA.MI19.not_subsetConjecture`. The module docstring and
+PR edit draft cite [the public theorem at revision cd44ce9](https://github.com/sgstepaniants/OpenProblemsInNLA/blob/cd44ce9bcb84ebc79a1aa934918d1f76b2a9c6e7/matrix-inequalities-and-norms/MI-19/lean/Solution.lean).
+[OpenProblemsInNLA MI-19](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/main/matrix-inequalities-and-norms/MI-19/README.md)
+records the result as Lean verified.
+
+### Conjecture 4: permanent-on-top at q = 1
+
+Bapat and Lal's Conjecture 4 asserts that the largest eigenvalue of the
+q-Schur power matrix is the q-permanent for $`q∈[0,1]`$. At $`q=1`$ it includes
+the permanent-on-top conjecture, disproved by
+[Valery S. Shchesnovich (2016)](https://doi.org/10.1016/j.laa.2015.10.034).
+[Tran Hoang Anh's simpler counterexample](https://arxiv.org/abs/2101.03428)
+has permanent 504 and largest eigenvalue 512 (Section 4).
+The module docstring and PR edit draft cite these published mathematical proofs
+as related work. The spectrum computation is supplied by the cited paper.
+
 ### Timeline
 
 | Year | Result |
 |---|---|
 | 1994 | Bapat and Lal publish inequalities for the q-permanent. |
-| 2018 | Da Fonseca restates the original `[-1,1]` conjecture as Conjecture 1 and surveys known special cases. |
+| 2016 | Shchesnovich disproves permanent-on-top, which refutes Conjecture 4 at `q = 1`. |
+| 2018 | Da Fonseca's survey lists four conjectures: 1, 3, and 4 are Bapat–Lal's; 2 is da Fonseca's extension. |
 | 2020 | Mitchell studies the passage between singular positive semidefinite and positive definite matrices, and proves cases of the PSD extension. |
-| 2026 | This repository verifies the supplied order-144 certificate and a positive definite counterexample in Lean. |
+| 2021 | Tran Hoang Anh gives the simpler permanent-on-top counterexample with permanent 504 and largest eigenvalue 512. |
+| 2026 | This repository verifies the order-144 counterexample and the Conjecture 2 corollary in Lean. |
 
 The literature establishes monotonicity for matrices of order at most three and
 for tridiagonal positive definite matrices. Mitchell proves the PSD extension
@@ -265,4 +336,6 @@ These are earlier mathematical results, summarized in
 
 The present proof uses a two-coordinate Gram matrix and a negative derivative
 at $`q=1`$. Adding a sufficiently small positive multiple of the identity then
-reaches the positive definite class required by the original conjecture.
+reaches the positive definite class required by Conjecture 1. Any half-line
+$`(ε,\infty)`$ with $`ε<-1`$ contains $`[-1,1]`$, so the same counterexample
+also disproves Conjecture 2.

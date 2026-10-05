@@ -1,3 +1,4 @@
 import Bapat.Main
+import Bapat.DaFonseca
 
-/-! Complete disproof of the Bapat–Lal q-permanent monotonicity conjecture. -/
+/-! Complete disproofs of Bapat–Lal monotonicity and da Fonseca's half-line extension. -/

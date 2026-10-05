@@ -1,28 +1,42 @@
-# Pull request draft
+# Pull request edit draft
 
-**Title:** Add Bapat–Lal q-permanent monotonicity and record its negative answer
+**Title:** Formalize q-permanent Conjectures 1 and 2 and record their disproofs
 
-This PR adds Conjecture 1 in Section 4 of
-[da Fonseca, *The mu-permanent revisited*](https://arxiv.org/abs/1804.02231).
-The file defines the inversion count and q-permanent, and states the original
-monotonicity question as `answer(False) ↔ …`, with `category research solved, AMS 15`.
+This PR formalizes Conjectures 1 and 2 in Section 4 of
+[da Fonseca, *The mu-permanent revisited*](https://arxiv.org/abs/1804.02231),
+with `answer(False)` and `category research solved, AMS 15`.
 
-The external Lean proof establishes this exact statement. It produces an
-order-144 positive definite counterexample with a strict decrease inside
-`[-1,1]`, using an exact integer certificate and a sufficiently small diagonal
-perturbation. The final theorem depends only on
-`propext`, `Classical.choice`, and `Quot.sound`.
+[Kenta Kitamura's Lean proof repository](https://github.com/KitaKen1/bapat-lal-q-permanent-lean)
+refutes Conjecture 1 with an order-144 Hermitian
+positive definite non-diagonal counterexample on `[-1,1]`.
+Conjecture 2 follows because every half-line `(ε,∞)` with `ε < -1`
+contains `[-1,1]`. The complete local proof includes both theorem types.
+
+The module docstring also records two related solved conjectures in Section 5:
+
+- **Conjecture 3:** Matthew J. Colbrook's counterexample, formalized in Lean by
+  [George Stepaniants, Lean formalization of MI-19 (2026)](https://github.com/sgstepaniants/OpenProblemsInNLA/blob/cd44ce9bcb84ebc79a1aa934918d1f76b2a9c6e7/matrix-inequalities-and-norms/MI-19/lean/Solution.lean).
+- **Conjecture 4:** at `q = 1` it includes permanent-on-top, disproved by
+  [Shchesnovich, *The permanent-on-top conjecture is false*, Linear Algebra Appl. 490 (2016), 196–201](https://doi.org/10.1016/j.laa.2015.10.034).
+  [Tran Hoang Anh, *A simple counterexample for the permanent-on-top conjecture*, arXiv:2101.03428 (2021)](https://arxiv.org/abs/2101.03428) gives a simpler example.
+
+The two formal theorem declarations in this PR concern Conjectures 1 and 2.
 
 Proof: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/283f0eaf0084a63366da27dd515ce913d7afbcef/lean/Bapat/Main.lean#L25
+Half-line proof (local): [Bapat/DaFonseca.lean](../lean/Bapat/DaFonseca.lean)
 Repository: https://github.com/KitaKen1/bapat-lal-q-permanent-lean
-Lean4Web: https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean
+Lean4Web: [open in your browser](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F283f0eaf0084a63366da27dd515ce913d7afbcef%2Flean4web%2FBapatLalLean4Web.lean) (v4.35.0-rc3)
 
-Validation: `python3 lean/scripts/build_audit.py` builds both complete proofs,
-compiles this statement with FC's mathematical linters, compares the definitions and compiled
-target types, and audits the final axioms.
+Validation: `python3 lean/scripts/build_audit.py` builds both complete proof
+versions, checks FC linters and the two compiled targets, and audits the
+standard-three axiom closure.
 
 AI Usage Disclosure: This formalization, mathematical exploration, proof development, and documentation were produced by Kenta Kitamura with assistance from ChatGPT and OpenAI Codex using GPT-6 Astra and GPT-6.1 sol, and Claude Code using Claude Opus 5.5.
 
-Before submitting, copy `QPermanentMonotonicity.lean` to
-`FormalConjectures/Arxiv/1804.02231/QPermanentMonotonicity.lean` in FC,
-using the standard FC copyright header.
+---
+
+Local editing notes: replace the file in the existing PR branch with
+`QPermanentMonotonicity.lean`, using the standard FC copyright header.
+Then use **Edit** on PR #6857 to replace the title and body with the text above.
+Publish the updated proof repository first and run `fill_links.py` with its
+public commit to replace the local half-line proof link and update Lean4Web.

@@ -17,7 +17,6 @@ EVIDENCE = LEAN / "evidence"
 EVIDENCE.mkdir(exist_ok=True)
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
-
 def require(condition, message):
     if not condition:
         raise ValueError(message)
@@ -25,12 +24,11 @@ def require(condition, message):
 
 def definition(text):
     start = text.index("/-- The number of inversions")
-    end = text.index("∑ σ : Equiv.Perm (Fin n)", start)
-    return text[start:text.index("\n", end)]
+    return text[start:].split("namespace BapatLal", 1)[0].strip()
 
 
-def target(text):
-    match = re.search(r"theorem qPermanentMonotonicity\s*:\s*([\s\S]*?)\s*:= by", text)
+def target(text, name="qPermanentMonotonicity"):
+    match = re.search(r"theorem " + re.escape(name) + r"\s*:\s*([\s\S]*?)\s*:= by", text)
     require(match is not None, "Missing target theorem")
     return re.sub(r"\s+", " ", match.group(1)).strip()
 
@@ -67,11 +65,15 @@ def uncomment(text):
 
 
 main = (LEAN / "Bapat/Main.lean").read_text()
+half_line = (LEAN / "Bapat/DaFonseca.lean").read_text()
 web = (ROOT / "lean4web/BapatLalLean4Web.lean").read_text()
 statement = FC.read_text()
 require(definition(statement) == definition((LEAN / "Bapat/Statement.lean").read_text()),
         "Definitions differ from the FC statement")
 require(target(statement) == target(main) == target(web), "Theorem statements differ")
+require(target(statement, "qPermanentHalfLineMonotonicity") ==
+        target(half_line, "qPermanentHalfLineMonotonicity") ==
+        target(web, "qPermanentHalfLineMonotonicity"), "Conjecture 2 statements differ")
 sources = [LEAN / "Bapat.lean", *sorted((LEAN / "Bapat").glob("*.lean")),
            ROOT / "lean4web/BapatLalLean4Web.lean"]
 for path in sources:
@@ -128,29 +130,37 @@ with (EVIDENCE / "build.log").open("w") as log:
                                   "-o", ".lake/FCStatement.olean"], env=env)
         if fc.returncode == 0:
             check = main.replace("import Bapat.Statement", "import FCStatement")
+            check += "\n" + half_line.replace("import Bapat.Main\n", "").replace("/-!", "/-", 1)
             check = check.replace("namespace BapatLal", "namespace BapatFCValidation")
             check = check.replace("end BapatLal", "end BapatFCValidation")
-            check += '''\nrun_meta do
-  let fc ← Lean.getConstInfo ``BapatLal.qPermanentMonotonicity
-  let proof ← Lean.getConstInfo ``BapatFCValidation.qPermanentMonotonicity
+            for name in ("qPermanentMonotonicity", "qPermanentHalfLineMonotonicity"):
+                check += f'''\nrun_meta do
+  let fc ← Lean.getConstInfo ``BapatLal.{name}
+  let proof ← Lean.getConstInfo ``BapatFCValidation.{name}
   unless ← Lean.Meta.isDefEq fc.type proof.type do
     throwError "Compiled FC target differs from the complete proof"
-  Lean.logInfo "Compiled FC target and complete proof have definitionally equal types"
+  Lean.logInfo "Compiled FC target {name} and complete proof have definitionally equal types"
 '''
             checker = LEAN / ".lake/FCTypeCheck.lean"
             checker.write_text(check)
             run("compiled_target", ["lean", "-DwarningAsError=true", "-R", ".lake", str(checker)], env=env)
 
+
 axioms = {}
 for label, output in outputs.items():
     axioms[label] = {name: [v.strip() for v in values.split(",") if v.strip()]
                     for name, values in re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]", output)}
-required = {"main_proof": "BapatLal.qPermanentMonotonicity",
-            "lean4web": "BapatLal.qPermanentMonotonicity",
-            "compiled_target": "BapatFCValidation.qPermanentMonotonicity"}
+required = {
+    "main_proof": ["BapatLal.qPermanentMonotonicity", "BapatLal.qPermanentHalfLineMonotonicity"],
+    "lean4web": ["BapatLal.qPermanentMonotonicity", "BapatLal.qPermanentHalfLineMonotonicity"],
+    "compiled_target": ["BapatFCValidation.qPermanentMonotonicity",
+                        "BapatFCValidation.qPermanentHalfLineMonotonicity"],
+}
 axiom_ok = all(name in axioms.get(label, {}) and set(axioms[label][name]) <= ALLOWED
-               for label, name in required.items())
-ok = all(results.get(label) == 0 for label in ("main_proof", "lean4web", "fc_statement", "compiled_target")) and axiom_ok
+               for label, names in required.items() for name in names)
+ok = all(results.get(label) == 0 for label in (
+    "main_proof", "lean4web", "fc_statement", "compiled_target"
+)) and axiom_ok
 result = {
     "status": "PASS" if ok else "FAIL",
     "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -160,9 +170,11 @@ result = {
     "lean_version": (LEAN / "lean-toolchain").read_text().strip(),
     "lean4web_version": (ROOT / "lean4web/lean-toolchain").read_text().strip(),
     "axiom_audit_passed": axiom_ok,
-    "axioms": {label: axioms.get(label, {}).get(name) for label, name in required.items()},
+    "axioms": {label: {name: axioms.get(label, {}).get(name) for name in names}
+               for label, names in required.items()},
     "definitions_and_statements_match": True,
     "certificate_copies_match": True,
+    "fc_targets_compiled": ["qPermanentMonotonicity", "qPermanentHalfLineMonotonicity"],
     "source_sha256": {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
                       for path in [*sources, FC]},
 }
