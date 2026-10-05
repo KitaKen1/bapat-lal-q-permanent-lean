@@ -214,10 +214,9 @@ positive definite, but its claimed decrease at `q₀ = 1 - 10^-70` is not formal
 The proof also does not determine the smallest counterexample dimension or give
 a counterexample restricted to real symmetric matrices.
 
-This repository records a formal disproof from the supplied certificate. It
-makes no claim of priority for the mathematical discovery. Its FC target is the
-original interval `[-1,1]`; no separate FC statement for the half-line extension
-is included. Neither the registration candidate nor the PR draft has been
+This repository records a formal disproof from the supplied certificate.
+Its FC target is the original interval `[-1,1]`; no separate FC statement for
+the half-line extension is included. Neither the registration candidate nor the PR draft has been
 submitted to Formal Conjectures.
 
 ## Sources
