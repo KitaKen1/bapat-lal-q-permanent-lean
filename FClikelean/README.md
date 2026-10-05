@@ -22,9 +22,7 @@ The shared definitions are copied verbatim in
 [Bapat/Statement.lean](../lean/Bapat/Statement.lean).
 `python3 lean/scripts/build_audit.py` checks both complete proofs, FC linters,
 compiled target types, and the standard-three axiom closure.
-The FC statements use `by sorry`. Both `formal_proof` links currently cite the
-published Conjecture 1 proof: its non-diagonal counterexample also refutes
-Conjecture 2. The revised Conjecture 2 proof is complete locally in
-[Bapat/DaFonseca.lean](../lean/Bapat/DaFonseca.lean).
+The FC statements use `by sorry`, with `formal_proof` links to the two
+published complete Lean proofs at a fixed commit.
 Run `fill_links.py` with a public commit to refresh the fixed-commit proof
 and Lean4Web links after later proof updates.

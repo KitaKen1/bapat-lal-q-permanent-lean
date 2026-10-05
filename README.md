@@ -50,16 +50,14 @@ This repository contributes the following:
    [Bapat/DaFonseca.lean](lean/Bapat/DaFonseca.lean) derives the negative answer
    by restricting any proposed half-line monotonicity to $`[-1,1]`$.
 
-**Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F42dabed0c50511040a5c72b80c81593ba58fd82e%2Flean4web%2FBapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
-The link opens the published revision. The revised non-diagonal Conjecture 2
-is in the local [Lean4Web file](lean4web/BapatLalLean4Web.lean).
+**Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F2d1f9c72f7303f4d8ed4037861df4fa53064b43e%2Flean4web%2FBapatLalLean4Web.lean) (Lean **v4.35.0-rc3**).
 
 ## Formal Conjectures targets
 
 [FClikelean/QPermanentMonotonicity.lean](FClikelean/QPermanentMonotonicity.lean)
 contains the two statements for Conjectures 1 and 2 with
 `category research solved, AMS 15`.
-Conjecture 1 is included in [PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
+Conjectures 1 and 2 are included in [PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
 Conjecture 2 is a corollary of the same order-144 counterexample.
 The module docstring and [PR edit draft](FClikelean/PR_DRAFT.md) cite the known
 solutions of Conjectures 3 and 4 as related work.

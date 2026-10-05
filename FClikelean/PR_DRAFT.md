@@ -5,7 +5,7 @@
 This PR makes two contributions:
 
 1. **Formalization.** It adds the Bapat–Lal q-permanent monotonicity question and da Fonseca's half-line extension, stated as Conjectures 1 and 2 in Section 4 of [da Fonseca, *The mu-permanent revisited*](https://arxiv.org/abs/1804.02231), in `FormalConjectures/Arxiv/1804.02231/QPermanentMonotonicity.lean`. The file defines the inversion count and q-permanent.
-2. **Formal disproof.** It records both negative answers as `research solved`, with `formal_proof` links to the kernel-checked Conjecture 1 counterexample, which refutes both statements. The proof establishes a strict decrease for a non-diagonal Hermitian positive definite complex matrix of order 144.
+2. **Formal disproof.** It records both negative answers as `research solved`, with `formal_proof` links to complete, kernel-checked Lean 4 proofs of both statements. The proof establishes a strict decrease for a non-diagonal Hermitian positive definite complex matrix of order 144.
 
 ### 1. Formalization
 
@@ -49,12 +49,10 @@ The disproof of Conjecture 1 starts with a rank-two Gram matrix of order 144. Ex
 
 The same counterexample refutes Conjecture 2: every half-line (ε, ∞) with ε < −1 contains [-1, 1]. Strict monotonicity on that half-line would imply the monotonicity already disproved by Conjecture 1. The module docstring cites the proof repository as `[Ki26]`, and both conjecture docstrings record the negative answer with this reference.
 
-- [Complete proof of Conjecture 1](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/Main.lean#L25)
-- [Published counterexample used for Conjecture 2](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/42dabed0c50511040a5c72b80c81593ba58fd82e/lean/Bapat/Main.lean#L25)
+- [Complete proof of Conjecture 1](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/2d1f9c72f7303f4d8ed4037861df4fa53064b43e/lean/Bapat/Main.lean#L25)
+- [Complete proof of Conjecture 2](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/2d1f9c72f7303f4d8ed4037861df4fa53064b43e/lean/Bapat/DaFonseca.lean#L21)
 - [GitHub repository](https://github.com/KitaKen1/bapat-lal-q-permanent-lean)
-- Lean4Web: [open in your browser](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F42dabed0c50511040a5c72b80c81593ba58fd82e%2Flean4web%2FBapatLalLean4Web.lean) — select Lean `v4.35.0-rc3`.
-
-The revised non-diagonal Conjecture 2 proof is in the local `lean/Bapat/DaFonseca.lean` and Lean4Web files. The links above still open the published revision.
+- Lean4Web: [open in your browser](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Fbapat-lal-q-permanent-lean%2F2d1f9c72f7303f4d8ed4037861df4fa53064b43e%2Flean4web%2FBapatLalLean4Web.lean) — select Lean `v4.35.0-rc3`.
 
 The repository checks that the shared definitions match character for character and that the compiled FC targets and the complete proofs have definitionally equal types. The main proof uses Lean `v4.33.1`; `#print axioms` reports only `propext`, `Classical.choice`, and `Quot.sound`. The complete proofs contain no `sorry`, `admit`, `native_decide`, or project-specific mathematical axioms. The updated FC module builds with `lake --wfail build 'FormalConjectures.Arxiv.«1804.02231».QPermanentMonotonicity'`.
 
