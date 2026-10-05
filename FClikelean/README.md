@@ -3,7 +3,8 @@
 [QPermanentMonotonicity.lean](QPermanentMonotonicity.lean) contains the
 q-permanent definitions and the negative answer to Bapat–Lal monotonicity,
 Conjecture 1 in [da Fonseca's survey](https://arxiv.org/abs/1804.02231).
-It is intended for `FormalConjectures/Arxiv/1804.02231/` and has not been submitted.
+It was submitted for `FormalConjectures/Arxiv/1804.02231/` in
+[PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
 
 The definitions are copied verbatim in [Bapat/Statement.lean](../lean/Bapat/Statement.lean).
 The complete proof is [Bapat/Main.lean](../lean/Bapat/Main.lean).

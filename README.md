@@ -216,8 +216,8 @@ a counterexample restricted to real symmetric matrices.
 
 This repository records a formal disproof from the supplied certificate.
 Its FC target is the original interval `[-1,1]`; no separate FC statement for
-the half-line extension is included. Neither the registration candidate nor the PR draft has been
-submitted to Formal Conjectures.
+the half-line extension is included. The formalization was submitted to
+Formal Conjectures in [PR #6857](https://github.com/google-deepmind/formal-conjectures/pull/6857).
 
 ## Sources
 
