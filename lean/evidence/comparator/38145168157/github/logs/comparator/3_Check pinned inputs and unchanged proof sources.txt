@@ -1,0 +1,5 @@
+﻿2026-10-11T13:56:28.8522473Z ##[group]Run python3 comparator/check-inputs.py --receipt-dir comparator-receipt
+2026-10-11T13:56:28.8525292Z [36;1mpython3 comparator/check-inputs.py --receipt-dir comparator-receipt[0m
+2026-10-11T13:56:28.8711264Z shell: /usr/bin/bash -e {0}
+2026-10-11T13:56:28.8712539Z ##[endgroup]
+2026-10-11T13:56:28.9481309Z Input check passed: both targets, exact FC copy, 23 unchanged pinned files.

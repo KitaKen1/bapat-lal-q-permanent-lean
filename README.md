@@ -352,3 +352,62 @@ at $`q=1`$. Adding a sufficiently small positive multiple of the identity then
 reaches the positive definite class required by Conjecture 1. Any half-line
 $`(ε,\infty)`$ with $`ε<-1`$ contains $`[-1,1]`$, so the same counterexample
 also disproves Conjecture 2.
+
+## Appendix: Verification by Lean Comparator
+
+On 11 October 2026, the public `main` run of
+[Comparator verification](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157)
+completed successfully (run **38145168157**, attempt **1**). It checked commit
+[`0179c028957e0214c2af1741d01088ffa5ae65d5`](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/tree/0179c028957e0214c2af1741d01088ffa5ae65d5).
+Both complete proofs were unchanged from the linked proof commit
+`2d1f9c72f7303f4d8ed4037861df4fa53064b43e`.
+
+| FC target | Verified answer | Reported axiom dependencies |
+|---|---|---|
+| `BapatLal.qPermanentMonotonicity` | `False` (Conjecture 1 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
+| `BapatLal.qPermanentHalfLineMonotonicity` | `False` (Conjecture 2 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
+
+The [workflow at the tested commit](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/0179c028957e0214c2af1741d01088ffa5ae65d5/.github/workflows/comparator.yml)
+builds and exports the FC challenge and the complete solution separately.
+Lean Comparator checks the target statements and their dependent declarations,
+audits the solution's axiom dependencies against the three-axiom allowlist, and
+replays the exported solution with the builtin Lean kernel. The challenge is an
+exact copy of the two-target file at FC PR #6857 revision
+`161294082da9cded42153cf8718e7688c6bc022a`; tool and dependency revisions are recorded
+in the [archived pins](lean/evidence/comparator/38145168157/receipt/pins.json).
+
+The [preserved Comparator log](lean/evidence/comparator/38145168157/receipt/comparator.log)
+contains the actual dependency reports and final success output:
+
+```text
+info: Bapat/Main.lean:38:0: 'BapatLal.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Bapat/DaFonseca.lean:37:0: 'BapatLal.qPermanentHalfLineMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean default kernel accepts the solution
+Your solution is okay!
+Finished with result: success
+```
+
+The allowlist alone is a policy setting. The two dependency reports show the
+axioms actually used, and the final success message follows the comparison,
+axiom audit, and kernel checks in
+[the pinned Comparator implementation](https://github.com/leanprover/comparator/blob/ca04cfc72b550331658ec314bf47685281bfd4bf/Main.lean).
+The [saved job metadata](lean/evidence/comparator/38145168157/github/job-114486881308.json)
+also records the verification step's `success` conclusion.
+
+For review after GitHub Actions retention expires, the
+[public evidence archive](lean/evidence/comparator/38145168157/) preserves the
+original artifact ZIP, its extracted receipt, the complete workflow log ZIP,
+all extracted job/step logs, GitHub API snapshots of the run, attempt, job and
+artifact, and [SHA-256 checksums](lean/evidence/comparator/38145168157/SHA256SUMS).
+The original artifact digest matches GitHub's recorded digest:
+
+```text
+4e3a7c64260c10da03fbba990c6544730d019f02f25100bb90d754bcfe589993
+```
+
+These files are stored in Git, independently of the Actions artifact/log
+retention period. See the [archive guide](lean/evidence/comparator/38145168157/README.md)
+for the evidence checklist, checksum command, and instructions to independently
+rerun the tested commit. The API snapshots and hashes preserve the retrieved
+record and its integrity; they are not a signed GitHub attestation. Future
+changes to the proof or verification inputs require a new verification run.

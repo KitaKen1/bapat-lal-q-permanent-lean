@@ -1,0 +1,12 @@
+﻿2026-10-11T13:56:28.9616624Z ##[group]Run df -h /
+2026-10-11T13:56:28.9617578Z [36;1mdf -h /[0m
+2026-10-11T13:56:28.9618768Z [36;1msudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc \[0m
+2026-10-11T13:56:28.9620586Z [36;1m  /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \[0m
+2026-10-11T13:56:28.9622027Z [36;1m  /usr/local/share/powershell /usr/share/swift[0m
+2026-10-11T13:56:28.9623250Z [36;1mdf -h /[0m
+2026-10-11T13:56:28.9661516Z shell: /usr/bin/bash -e {0}
+2026-10-11T13:56:28.9662579Z ##[endgroup]
+2026-10-11T13:56:28.9876328Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-11T13:56:28.9877793Z /dev/root       145G   59G   86G  41% /
+2026-10-11T13:58:01.9165896Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-11T13:58:01.9167202Z /dev/root       145G   32G  113G  22% /

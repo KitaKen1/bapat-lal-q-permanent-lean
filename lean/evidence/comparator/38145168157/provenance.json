@@ -1,0 +1,107 @@
+{
+  "repository": "KitaKen1/bapat-lal-q-permanent-lean",
+  "run_id": 38145168157,
+  "run_attempt": 1,
+  "job_id": 114486881308,
+  "artifact_id": 11705120766,
+  "verification_commit": "0179c028957e0214c2af1741d01088ffa5ae65d5",
+  "downloaded_artifact_file": "comparator-38145168157-1.zip",
+  "github_reported_artifact_digest": "sha256:4e3a7c64260c10da03fbba990c6544730d019f02f25100bb90d754bcfe589993",
+  "local_artifact_sha256": "4e3a7c64260c10da03fbba990c6544730d019f02f25100bb90d754bcfe589993",
+  "artifact_digest_matches": true,
+  "api_downloads": {
+    "github/run.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157",
+      "retrieved_at_utc": "2026-10-11T14:31:38.134948Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"b2279edcbe8962b581093f1b3d261cdbe7897c646164dc1d15669deeae4f165b\"",
+        "X-GitHub-Request-Id": "C1C4:3AF01B:156BC10:1AAEE02:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "d7b684184a18ca7b09ceb8478f0dc300363e08080e1702109f6ebbab4f41704b",
+      "size_bytes": 13737
+    },
+    "github/attempt-1.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/attempts/1",
+      "retrieved_at_utc": "2026-10-11T14:31:38.146470Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"75b71ec05c5c851f037b16a6aab18d23cb32afe88ade8f3bc4403461943b24d7\"",
+        "X-GitHub-Request-Id": "C1BD:196879:150A846:1A4D188:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "04e83e6369d43d7837bca18334af537727cf5528ac91b9d2ed52f5928be8374d",
+      "size_bytes": 13759
+    },
+    "github/jobs.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/attempts/1/jobs?per_page=100",
+      "retrieved_at_utc": "2026-10-11T14:31:38.157179Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"8f53ae2e087945b84fccd063c7f1d32948965c53cc46c29bcdb4ef300ac28ce0\"",
+        "X-GitHub-Request-Id": "C1BE:33EF60:14C3392:1A06731:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "d1937d5b864fa47ea38289e48bb840990ba6f28a4757993f5bd484d664740250",
+      "size_bytes": 2672
+    },
+    "github/job-114486881308.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/jobs/114486881308",
+      "retrieved_at_utc": "2026-10-11T14:31:38.168329Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"053404abba70d6fedf92290c17349ca5df916ec383d5b8b6ad40fe4b4b696ae7\"",
+        "X-GitHub-Request-Id": "C1C3:3E0CE1:14D7238:1A19EA3:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "f2307f9d592d156f9ae8d241ea54a49cb53e820ee413acb94553a71802c349a9",
+      "size_bytes": 2645
+    },
+    "github/artifacts.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/artifacts?per_page=100",
+      "retrieved_at_utc": "2026-10-11T14:31:38.177743Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"b41d3df0aa04bd8f63030eaa7c454169d5e4fdad342f75fb0aa1c0ef7926491b\"",
+        "X-GitHub-Request-Id": "C1C2:20E994:1521071:1A636FD:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "8e6c88917868798fc798b6078da8df9a664ccfd2c92541f23a3bf7c623052aef",
+      "size_bytes": 753
+    },
+    "github/artifact-11705120766.json": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/artifacts/11705120766",
+      "retrieved_at_utc": "2026-10-11T14:31:38.178386Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "ETag": "\"7853e0c03013b32c58bb68bf09d786bbfeaab9554fa0a4f3fd4ec895e9093e5b\"",
+        "X-GitHub-Request-Id": "C1C1:0C61:788A5C:98153E:6ACB9DCB",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "sha256": "bde51ecc42ff7ae09ab5488d4c09920577452e628b589bd432b3604c64abfd24",
+      "size_bytes": 721
+    },
+    "github/run-38145168157-attempt-1-logs.zip": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/attempts/1/logs",
+      "retrieved_at_utc": "2026-10-11T14:31:38.180823Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "X-GitHub-Request-Id": "C1BF:2F99B1:14EF891:1A32A9C:6ACB9DCB"
+      },
+      "sha256": "e0f521777a9cb6274a469cea53ade62990144e50ddf12043a7565b9abdf4cf53",
+      "size_bytes": 38021
+    },
+    "github/job-114486881308.log": {
+      "api_url": "https://api.github.com/repos/KitaKen1/bapat-lal-q-permanent-lean/actions/jobs/114486881308/logs",
+      "retrieved_at_utc": "2026-10-11T14:31:38.186638Z",
+      "response_headers": {
+        "Date": "Sun, 11 Oct 2026 14:31:39 GMT",
+        "X-GitHub-Request-Id": "C1C0:26E652:14A3CA8:19E60F9:6ACB9DCB"
+      },
+      "sha256": "56acffc972fa42626ef94ab673af378c043e9a35c8fa9b350a29733afdf51f31",
+      "size_bytes": 72042
+    }
+  },
+  "note": "API response bodies and downloaded logs are preserved as retrieved. This retrieval manifest is an archive index generated locally; it is not a signed GitHub attestation."
+}

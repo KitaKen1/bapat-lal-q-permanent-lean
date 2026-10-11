@@ -1,0 +1,24 @@
+﻿2026-10-11T14:06:48.4356783Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-11T14:06:48.4357205Z with:
+2026-10-11T14:06:48.4357462Z   name: comparator-38145168157-1
+2026-10-11T14:06:48.4357727Z   path: comparator-receipt/
+2026-10-11T14:06:48.4357987Z   if-no-files-found: warn
+2026-10-11T14:06:48.4358210Z   retention-days: 90
+2026-10-11T14:06:48.4358428Z   compression-level: 6
+2026-10-11T14:06:48.4358637Z   overwrite: false
+2026-10-11T14:06:48.4358847Z   include-hidden-files: false
+2026-10-11T14:06:48.4359087Z ##[endgroup]
+2026-10-11T14:06:48.7409684Z (node:6807) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-11T14:06:48.7410650Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-11T14:06:48.7501687Z With the provided path, there will be 9 files uploaded
+2026-10-11T14:06:48.7502511Z Artifact name is valid!
+2026-10-11T14:06:48.7502858Z Root directory input is valid!
+2026-10-11T14:06:49.1134003Z Beginning upload of artifact content to blob storage
+2026-10-11T14:06:49.1486290Z (node:6807) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-11T14:06:49.3570460Z Uploaded bytes 13089
+2026-10-11T14:06:49.4199984Z Finished uploading artifact content to blob storage!
+2026-10-11T14:06:49.4201900Z SHA256 digest of uploaded artifact zip is 4e3a7c64260c10da03fbba990c6544730d019f02f25100bb90d754bcfe589993
+2026-10-11T14:06:49.4203202Z Finalizing artifact upload
+2026-10-11T14:06:49.6563710Z Artifact comparator-38145168157-1.zip successfully finalized. Artifact ID 11705120766
+2026-10-11T14:06:49.6564978Z Artifact comparator-38145168157-1 has been successfully uploaded! Final size is 13089 bytes. Artifact ID is 11705120766
+2026-10-11T14:06:49.6571327Z Artifact download URL: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/artifacts/11705120766

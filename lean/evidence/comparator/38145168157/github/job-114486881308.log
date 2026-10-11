@@ -1,0 +1,697 @@
+﻿2026-10-11T13:56:27.2317521Z Current runner version: '2.337.0'
+2026-10-11T13:56:27.2342172Z ##[group]Runner Image Provisioner
+2026-10-11T13:56:27.2343030Z Hosted Compute Agent
+2026-10-11T13:56:27.2343560Z Version: 20261002.596
+2026-10-11T13:56:27.2344126Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-11T13:56:27.2344878Z Build Date: 2026-10-02T22:28:27Z
+2026-10-11T13:56:27.2345504Z Worker ID: {f2ee3177-4bf9-4a6a-99d1-cdf31b9a51dd}
+2026-10-11T13:56:27.2346470Z Region: westus3
+2026-10-11T13:56:27.2346973Z Cloud: Azure
+2026-10-11T13:56:27.2347457Z ##[endgroup]
+2026-10-11T13:56:27.2349021Z ##[group]Operating System
+2026-10-11T13:56:27.2349596Z Ubuntu
+2026-10-11T13:56:27.2350101Z 24.04.5
+2026-10-11T13:56:27.2350709Z LTS
+2026-10-11T13:56:27.2351183Z ##[endgroup]
+2026-10-11T13:56:27.2351763Z ##[group]Runner Image
+2026-10-11T13:56:27.2352310Z Image: ubuntu-24.04
+2026-10-11T13:56:27.2352827Z Version: 20261004.327.1
+2026-10-11T13:56:27.2353989Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-11T13:56:27.2355473Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-11T13:56:27.2356340Z ##[endgroup]
+2026-10-11T13:56:27.2357364Z ##[group]GITHUB_TOKEN Permissions
+2026-10-11T13:56:27.2359568Z Contents: read
+2026-10-11T13:56:27.2360323Z Metadata: read
+2026-10-11T13:56:27.2360864Z ##[endgroup]
+2026-10-11T13:56:27.2363006Z Secret source: Actions
+2026-10-11T13:56:27.2363948Z Cache mode: write
+2026-10-11T13:56:27.2364604Z Prepare workflow directory
+2026-10-11T13:56:27.2740719Z Prepare all required actions
+2026-10-11T13:56:27.2789359Z Getting action download info
+2026-10-11T13:56:27.5753196Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-11T13:56:27.6545824Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-11T13:56:27.8300411Z Complete job name: comparator
+2026-10-11T13:56:27.9018715Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-11T13:56:27.9019833Z with:
+2026-10-11T13:56:27.9020526Z   fetch-depth: 0
+2026-10-11T13:56:27.9021068Z   persist-credentials: false
+2026-10-11T13:56:27.9021978Z   repository: KitaKen1/bapat-lal-q-permanent-lean
+2026-10-11T13:56:27.9025868Z   token: ***
+2026-10-11T13:56:27.9026372Z   ssh-strict: true
+2026-10-11T13:56:27.9026866Z   ssh-user: git
+2026-10-11T13:56:27.9027319Z   clean: true
+2026-10-11T13:56:27.9027809Z   sparse-checkout-cone-mode: true
+2026-10-11T13:56:27.9028427Z   fetch-tags: false
+2026-10-11T13:56:27.9028898Z   show-progress: true
+2026-10-11T13:56:27.9029386Z   lfs: false
+2026-10-11T13:56:27.9029839Z   submodules: false
+2026-10-11T13:56:27.9030440Z   set-safe-directory: true
+2026-10-11T13:56:27.9031022Z   allow-unsafe-pr-checkout: false
+2026-10-11T13:56:27.9031967Z ##[endgroup]
+2026-10-11T13:56:28.0150654Z Syncing repository: KitaKen1/bapat-lal-q-permanent-lean
+2026-10-11T13:56:28.0152606Z ##[group]Getting Git version info
+2026-10-11T13:56:28.0153564Z Working directory is '/home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean'
+2026-10-11T13:56:28.0154746Z [command]/usr/bin/git version
+2026-10-11T13:56:28.0214528Z git version 2.55.0
+2026-10-11T13:56:28.0233499Z ##[endgroup]
+2026-10-11T13:56:28.0249139Z Temporarily overriding HOME='/home/runner/work/_temp/217547f4-8c14-44bb-9b9f-ec332501b3db' before making global git config changes
+2026-10-11T13:56:28.0251675Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T13:56:28.0256090Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean
+2026-10-11T13:56:28.0303669Z Deleting the contents of '/home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean'
+2026-10-11T13:56:28.0307635Z ##[group]Initializing the repository
+2026-10-11T13:56:28.0311841Z [command]/usr/bin/git init /home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean
+2026-10-11T13:56:28.0407802Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-11T13:56:28.0408832Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-11T13:56:28.0409679Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-11T13:56:28.0410467Z hint: call:
+2026-10-11T13:56:28.0410837Z hint:
+2026-10-11T13:56:28.0411322Z hint: 	git config --global init.defaultBranch <name>
+2026-10-11T13:56:28.0411869Z hint:
+2026-10-11T13:56:28.0412387Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-11T13:56:28.0413212Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-11T13:56:28.0413866Z hint:
+2026-10-11T13:56:28.0414242Z hint: 	git branch -m <name>
+2026-10-11T13:56:28.0414665Z hint:
+2026-10-11T13:56:28.0415223Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-11T13:56:28.0420107Z Initialized empty Git repository in /home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean/.git/
+2026-10-11T13:56:28.0430669Z [command]/usr/bin/git remote add origin https://github.com/KitaKen1/bapat-lal-q-permanent-lean
+2026-10-11T13:56:28.0474414Z ##[endgroup]
+2026-10-11T13:56:28.0475686Z ##[group]Disabling automatic garbage collection
+2026-10-11T13:56:28.0479171Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-11T13:56:28.0506466Z ##[endgroup]
+2026-10-11T13:56:28.0507615Z ##[group]Setting up auth
+2026-10-11T13:56:28.0514072Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T13:56:28.0541649Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T13:56:28.0943153Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T13:56:28.0975283Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T13:56:28.1153491Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T13:56:28.1180891Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T13:56:28.1359499Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-11T13:56:28.1391961Z ##[endgroup]
+2026-10-11T13:56:28.1393205Z ##[group]Fetching the repository
+2026-10-11T13:56:28.1402192Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-11T13:56:28.7293878Z From https://github.com/KitaKen1/bapat-lal-q-permanent-lean
+2026-10-11T13:56:28.7295293Z  * [new branch]      comparator-verification -> origin/comparator-verification
+2026-10-11T13:56:28.7296472Z  * [new branch]      main                    -> origin/main
+2026-10-11T13:56:28.7305039Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-11T13:56:28.7327336Z   origin/main
+2026-10-11T13:56:28.7334516Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-11T13:56:28.7354803Z 0179c028957e0214c2af1741d01088ffa5ae65d5
+2026-10-11T13:56:28.7357685Z ##[endgroup]
+2026-10-11T13:56:28.7358441Z ##[group]Determining the checkout info
+2026-10-11T13:56:28.7359370Z ##[endgroup]
+2026-10-11T13:56:28.7373456Z [command]/usr/bin/git sparse-checkout disable
+2026-10-11T13:56:28.7415768Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-11T13:56:28.7443412Z ##[group]Checking out the ref
+2026-10-11T13:56:28.7447012Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-11T13:56:28.7522111Z Switched to a new branch 'main'
+2026-10-11T13:56:28.7525596Z branch 'main' set up to track 'origin/main'.
+2026-10-11T13:56:28.7530600Z ##[endgroup]
+2026-10-11T13:56:28.7572426Z [command]/usr/bin/git log -1 --format=%H
+2026-10-11T13:56:28.7594040Z 0179c028957e0214c2af1741d01088ffa5ae65d5
+2026-10-11T13:56:28.7605698Z ##[group]Removing auth
+2026-10-11T13:56:28.7606880Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T13:56:28.7631927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T13:56:28.7811720Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T13:56:28.7834596Z http.https://github.com/.extraheader
+2026-10-11T13:56:28.7842371Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-11T13:56:28.7871456Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T13:56:28.8108459Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T13:56:28.8112690Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T13:56:28.8274233Z ##[endgroup]
+2026-10-11T13:56:28.8522514Z ##[group]Run python3 comparator/check-inputs.py --receipt-dir comparator-receipt
+2026-10-11T13:56:28.8525299Z [36;1mpython3 comparator/check-inputs.py --receipt-dir comparator-receipt[0m
+2026-10-11T13:56:28.8711329Z shell: /usr/bin/bash -e {0}
+2026-10-11T13:56:28.8712543Z ##[endgroup]
+2026-10-11T13:56:28.9481405Z Input check passed: both targets, exact FC copy, 23 unchanged pinned files.
+2026-10-11T13:56:28.9616659Z ##[group]Run df -h /
+2026-10-11T13:56:28.9617583Z [36;1mdf -h /[0m
+2026-10-11T13:56:28.9618777Z [36;1msudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc \[0m
+2026-10-11T13:56:28.9620591Z [36;1m  /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \[0m
+2026-10-11T13:56:28.9622031Z [36;1m  /usr/local/share/powershell /usr/share/swift[0m
+2026-10-11T13:56:28.9623253Z [36;1mdf -h /[0m
+2026-10-11T13:56:28.9661552Z shell: /usr/bin/bash -e {0}
+2026-10-11T13:56:28.9662584Z ##[endgroup]
+2026-10-11T13:56:28.9876415Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-11T13:56:28.9877798Z /dev/root       145G   59G   86G  41% /
+2026-10-11T13:58:01.9165968Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-11T13:58:01.9167248Z /dev/root       145G   32G  113G  22% /
+2026-10-11T13:58:01.9240557Z ##[group]Run bash comparator/install-tools.sh
+2026-10-11T13:58:01.9240978Z [36;1mbash comparator/install-tools.sh[0m
+2026-10-11T13:58:01.9279277Z shell: /usr/bin/bash -e {0}
+2026-10-11T13:58:01.9279571Z env:
+2026-10-11T13:58:01.9279863Z   COMPARATOR_TOOLS: /home/runner/work/_temp/comparator-tools
+2026-10-11T13:58:01.9280389Z ##[endgroup]
+2026-10-11T13:58:02.0189538Z info: downloading installer
+2026-10-11T13:58:03.1594024Z info: downloading https://releases.lean-lang.org/lean4/v4.33.1/lean-4.33.1-linux.tar.zst
+2026-10-11T13:58:06.3429664Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1
+2026-10-11T13:58:12.5094041Z 
+2026-10-11T13:58:12.5472721Z leanprover/lean4:v4.33.1 installed - Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+2026-10-11T13:58:12.5473874Z 
+2026-10-11T13:58:12.5498018Z Cloning into '/home/runner/work/_temp/comparator-tools/landrun'...
+2026-10-11T13:58:13.5102564Z HEAD is now at 811cfff Update README.md
+2026-10-11T13:58:13.5965347Z go: downloading github.com/urfave/cli/v3 v3.6.2
+2026-10-11T13:58:13.7534009Z go: downloading github.com/landlock-lsm/go-landlock v0.9.0
+2026-10-11T13:58:14.6884492Z go: downloading golang.org/x/sys v0.40.0
+2026-10-11T13:58:14.7238897Z go: downloading kernel.org/pub/linux/libs/security/libcap/psx v1.2.77
+2026-10-11T13:58:25.1836857Z Cloning into '/home/runner/work/_temp/comparator-tools/comparator'...
+2026-10-11T13:58:25.7274462Z HEAD is now at ca04cfc chore: bump toolchain to v4.35.0-rc4 (#101)
+2026-10-11T13:58:26.2921576Z info: downloading https://releases.lean-lang.org/lean4/v4.35.0-rc4/lean-4.35.0-rc4-linux.tar.zst
+2026-10-11T13:58:29.3436096Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.35.0-rc4
+2026-10-11T13:58:35.8559064Z 
+2026-10-11T13:58:35.8958674Z leanprover/lean4:v4.35.0-rc4 installed - Lean (version 4.35.0-rc4, x86_64-unknown-linux-gnu, commit c29b6dda4f7c20e3eeaa717c4e565663c5cfa364, Release)
+2026-10-11T13:58:35.8959807Z 
+2026-10-11T13:58:36.0854641Z info: lean4export: materializing new dependency
+2026-10-11T13:58:36.2523645Z info: lean4export: fetching revision '05d43a2bc773b40ecfdebb32294192a5ef756951' from https://github.com/leanprover/lean4export
+2026-10-11T13:58:36.9171676Z info: lean4export: checking out revision '05d43a2bc773b40ecfdebb32294192a5ef756951'
+2026-10-11T13:58:38.1363602Z ✔ [1/4] Built Comparator.Util (258ms)
+2026-10-11T13:58:40.1385542Z ✔ [5/16] Built Comparator.Util:c.o (107ms)
+2026-10-11T13:58:41.4399279Z ✔ [6/16] Built Export.Parse (1.4s)
+2026-10-11T13:58:41.8393775Z ✔ [7/16] Built Comparator.Axioms (430ms)
+2026-10-11T13:58:42.1398318Z ✔ [8/16] Built Comparator.Axioms:c.o (274ms)
+2026-10-11T13:58:42.4414166Z ✔ [9/16] Built Comparator.Compare (618ms)
+2026-10-11T13:58:42.7461693Z ✔ [10/16] Built Comparator (268ms)
+2026-10-11T13:58:42.8454648Z ✔ [11/16] Built Comparator:c.o (77ms)
+2026-10-11T13:58:43.0456821Z ✔ [12/16] Built Comparator.Compare:c.o (576ms)
+2026-10-11T13:58:44.1468284Z ✔ [13/16] Built Main (1.4s)
+2026-10-11T13:58:44.9477355Z ✔ [14/16] Built Main:c.o (869ms)
+2026-10-11T13:58:45.1479485Z ✔ [15/16] Built Export.Parse:c.o (3.7s)
+2026-10-11T13:58:45.6486673Z ✔ [16/16] Built comparator:exe (566ms)
+2026-10-11T13:58:45.6492749Z Build completed successfully (16 jobs).
+2026-10-11T13:58:45.6528921Z Cloning into '/home/runner/work/_temp/comparator-tools/lean4export'...
+2026-10-11T13:58:46.9591839Z HEAD is now at 15f6055 chore: bump toolchain to v4.33.0 (#44)
+2026-10-11T13:58:49.1051599Z ✔ [2/6] Built Export (2.1s)
+2026-10-11T13:58:49.9060730Z ✔ [3/6] Built Main (775ms)
+2026-10-11T13:58:50.1062723Z ✔ [4/6] Built Main:c.o (189ms)
+2026-10-11T13:58:51.7079478Z ✔ [5/6] Built Export:c.o (2.6s)
+2026-10-11T13:58:52.6098076Z ✔ [6/6] Built lean4export:exe (916ms)
+2026-10-11T13:58:52.6131462Z Build completed successfully (6 jobs).
+2026-10-11T13:58:52.6557103Z info: formal_conjectures: cloning https://github.com/google-deepmind/formal-conjectures
+2026-10-11T13:58:54.6064542Z info: formal_conjectures: checking out revision '89294ea02bd7cd678d59984add52cb4baef3dbf4'
+2026-10-11T13:58:54.7193172Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+2026-10-11T13:59:29.8499342Z info: mathlib: checking out revision '0df444a360eaa60ab8c11dca51a86af692955474'
+2026-10-11T13:59:32.0081660Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-10-11T13:59:33.4215142Z info: plausible: checking out revision 'b7eb3304aeae834b12dda98993a37f6a41f6f0bb'
+2026-10-11T13:59:33.4340714Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-10-11T13:59:33.9436680Z info: LeanSearchClient: checking out revision '5f4d51b81cbd3f6b32b156bfad9056621a040404'
+2026-10-11T13:59:33.9558580Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-10-11T13:59:34.6948693Z info: importGraph: checking out revision '16f02aa7642864af59f1ff0e384a015994db9118'
+2026-10-11T13:59:34.7104079Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-10-11T13:59:35.8020350Z info: proofwidgets: checking out revision '4be2e3d5087eeb272cf5a8853b8f9dd025ef5957'
+2026-10-11T13:59:36.4448360Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-10-11T13:59:37.7090459Z info: aesop: checking out revision '3448c0bcc5ce01b2d1546e483ec3620e32df3d0e'
+2026-10-11T13:59:37.7240076Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-10-11T13:59:38.3697500Z info: Qq: checking out revision '92c15be17b7caf78c2ad767ec40f89052d908d81'
+2026-10-11T13:59:38.3807910Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-10-11T13:59:46.6641927Z info: batteries: checking out revision '4488d40d070b9700d4d5a6aa342f0d40c31b2a2d'
+2026-10-11T13:59:46.6941387Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-10-11T13:59:47.2235693Z info: Cli: checking out revision '6130a47896ce867c6a4a55373441e59e565bad0f'
+2026-10-11T13:59:47.8353603Z ✔ [2/6] Built Cache.Cli (295ms)
+2026-10-11T13:59:47.9355179Z ✔ [3/6] Built Cache.Lean (353ms)
+2026-10-11T13:59:48.3374382Z ✔ [7/27] Built Cache.Cli:c.o (187ms)
+2026-10-11T13:59:48.3375227Z ✔ [8/27] Built Cache.Lean:c.o (200ms)
+2026-10-11T13:59:48.5376851Z ✔ [9/27] Built Cache.Infra (439ms)
+2026-10-11T13:59:48.7382154Z ✔ [10/27] Built Cache.Infra:c.o (194ms)
+2026-10-11T13:59:49.0376345Z ✔ [11/27] Built Batteries.Tactic.OpenPrivate (938ms)
+2026-10-11T13:59:50.3405129Z ✔ [12/27] Built Batteries.Tactic.OpenPrivate:c.o (1.3s)
+2026-10-11T13:59:50.4406429Z ✔ [13/27] Built Cache.IO (1.4s)
+2026-10-11T13:59:51.1404778Z ✔ [14/27] Built Cache.Hashing (712ms)
+2026-10-11T13:59:51.7416989Z ✔ [15/27] Built Cache.Hashing:c.o (593ms)
+2026-10-11T13:59:52.0434442Z ✔ [16/27] Built Cache.IO:c.o (1.6s)
+2026-10-11T13:59:53.2447447Z ✔ [17/27] Built Cache.Requests (2.1s)
+2026-10-11T13:59:53.7452981Z ✔ [18/27] Built Cache.Marker (493ms)
+2026-10-11T13:59:53.9455467Z ✔ [19/27] Built Cache.Marker:c.o (157ms)
+2026-10-11T13:59:54.4463737Z ✔ [20/27] Built Cache.Query (661ms)
+2026-10-11T13:59:54.8471599Z ✔ [21/27] Built Cache.Query:c.o (413ms)
+2026-10-11T13:59:55.1472902Z ✔ [22/27] Built Cache.Warning (742ms)
+2026-10-11T13:59:55.3474660Z ✔ [23/27] Built Cache.Warning:c.o (244ms)
+2026-10-11T13:59:56.1483330Z ✔ [24/27] Built Cache.Requests:c.o (2.9s)
+2026-10-11T13:59:56.2484189Z ✔ [25/27] Built Cache.Main (1.1s)
+2026-10-11T13:59:57.2495485Z ✔ [26/27] Built Cache.Main:c.o (958ms)
+2026-10-11T13:59:57.8507875Z ✔ [27/27] Built cache:exe (648ms)
+2026-10-11T13:59:59.7804713Z Current branch: HEAD
+2026-10-11T13:59:59.7805634Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-10-11T13:59:59.7806847Z Attempting to download 8690 file(s) from leanprover-community/mathlib4 cache at https://lakecache.blob.core.windows.net/mathlib4-master
+2026-10-11T14:00:01.0957256Z 
+2026-10-11T14:00:01.1965969Z Downloaded: 1 file(s) [attempted 1/8690 = 0%, 15 KB/s], Decompressed: 0
+2026-10-11T14:00:01.2986543Z Downloaded: 56 file(s) [attempted 56/8690 = 0%, 28 KB/s], Decompressed: 30
+2026-10-11T14:00:01.4031781Z Downloaded: 119 file(s) [attempted 119/8690 = 1%, 123 KB/s], Decompressed: 51
+2026-10-11T14:00:01.5026616Z Downloaded: 194 file(s) [attempted 194/8690 = 2%, 824 KB/s], Decompressed: 92
+2026-10-11T14:00:01.6060422Z Downloaded: 267 file(s) [attempted 267/8690 = 3%, 401 KB/s], Decompressed: 92
+2026-10-11T14:00:01.7052055Z Downloaded: 346 file(s) [attempted 346/8690 = 3%, 302 KB/s], Decompressed: 92
+2026-10-11T14:00:01.8091640Z Downloaded: 426 file(s) [attempted 426/8690 = 4%, 277 KB/s], Decompressed: 192
+2026-10-11T14:00:01.9110056Z Downloaded: 507 file(s) [attempted 507/8690 = 5%, 220 KB/s], Decompressed: 192
+2026-10-11T14:00:02.0112089Z Downloaded: 581 file(s) [attempted 581/8690 = 6%, 217 KB/s], Decompressed: 192
+2026-10-11T14:00:02.1121566Z Downloaded: 665 file(s) [attempted 665/8690 = 7%, 296 KB/s], Decompressed: 192
+2026-10-11T14:00:02.2095499Z Downloaded: 735 file(s) [attempted 735/8690 = 8%, 204 KB/s], Decompressed: 192
+2026-10-11T14:00:02.3099962Z Downloaded: 824 file(s) [attempted 824/8690 = 9%, 1136 KB/s], Decompressed: 192
+2026-10-11T14:00:02.4151909Z Downloaded: 896 file(s) [attempted 896/8690 = 10%, 2480 KB/s], Decompressed: 192
+2026-10-11T14:00:02.5135878Z Downloaded: 985 file(s) [attempted 985/8690 = 11%, 81 KB/s], Decompressed: 423
+2026-10-11T14:00:02.6143230Z Downloaded: 1074 file(s) [attempted 1074/8690 = 12%, 582 KB/s], Decompressed: 423
+2026-10-11T14:00:02.7175593Z Downloaded: 1150 file(s) [attempted 1150/8690 = 13%, 1440 KB/s], Decompressed: 423
+2026-10-11T14:00:02.8167565Z Downloaded: 1234 file(s) [attempted 1234/8690 = 14%, 416 KB/s], Decompressed: 423
+2026-10-11T14:00:02.9172132Z Downloaded: 1306 file(s) [attempted 1306/8690 = 15%, 136 KB/s], Decompressed: 423
+2026-10-11T14:00:03.0211955Z Downloaded: 1395 file(s) [attempted 1395/8690 = 16%, 1235 KB/s], Decompressed: 423
+2026-10-11T14:00:03.1212435Z Downloaded: 1483 file(s) [attempted 1483/8690 = 17%, 606 KB/s], Decompressed: 423
+2026-10-11T14:00:03.2212796Z Downloaded: 1560 file(s) [attempted 1560/8690 = 17%, 171 KB/s], Decompressed: 423
+2026-10-11T14:00:03.3211957Z Downloaded: 1651 file(s) [attempted 1651/8690 = 18%, 718 KB/s], Decompressed: 423
+2026-10-11T14:00:03.4239121Z Downloaded: 1737 file(s) [attempted 1737/8690 = 19%, 675 KB/s], Decompressed: 423
+2026-10-11T14:00:03.5241542Z Downloaded: 1811 file(s) [attempted 1811/8690 = 20%, 1093 KB/s], Decompressed: 423
+2026-10-11T14:00:03.6264026Z Downloaded: 1905 file(s) [attempted 1905/8690 = 21%, 1021 KB/s], Decompressed: 423
+2026-10-11T14:00:03.7265779Z Downloaded: 1986 file(s) [attempted 1986/8690 = 22%, 3234 KB/s], Decompressed: 423
+2026-10-11T14:00:03.8266525Z Downloaded: 2068 file(s) [attempted 2068/8690 = 23%, 115 KB/s], Decompressed: 423
+2026-10-11T14:00:03.9289427Z Downloaded: 2146 file(s) [attempted 2146/8690 = 24%, 1549 KB/s], Decompressed: 423
+2026-10-11T14:00:04.0306328Z Downloaded: 2228 file(s) [attempted 2228/8690 = 25%, 1926 KB/s], Decompressed: 423
+2026-10-11T14:00:04.1321936Z Downloaded: 2319 file(s) [attempted 2319/8690 = 26%, 361 KB/s], Decompressed: 423
+2026-10-11T14:00:04.2320691Z Downloaded: 2403 file(s) [attempted 2403/8690 = 27%, 869 KB/s], Decompressed: 985
+2026-10-11T14:00:04.3391363Z Downloaded: 2480 file(s) [attempted 2480/8690 = 28%, 561 KB/s], Decompressed: 985
+2026-10-11T14:00:04.4340144Z Downloaded: 2568 file(s) [attempted 2568/8690 = 29%, 3267 KB/s], Decompressed: 985
+2026-10-11T14:00:04.5476557Z Downloaded: 2657 file(s) [attempted 2657/8690 = 30%, 444 KB/s], Decompressed: 985
+2026-10-11T14:00:04.6565726Z Downloaded: 2729 file(s) [attempted 2729/8690 = 31%, 1336 KB/s], Decompressed: 985
+2026-10-11T14:00:04.7590554Z Downloaded: 2824 file(s) [attempted 2824/8690 = 32%, 74 KB/s], Decompressed: 985
+2026-10-11T14:00:04.8579086Z Downloaded: 2892 file(s) [attempted 2892/8690 = 33%, 86 KB/s], Decompressed: 985
+2026-10-11T14:00:04.9585326Z Downloaded: 2982 file(s) [attempted 2982/8690 = 34%, 221 KB/s], Decompressed: 985
+2026-10-11T14:00:05.0586944Z Downloaded: 3053 file(s) [attempted 3053/8690 = 35%, 728 KB/s], Decompressed: 985
+2026-10-11T14:00:05.1601948Z Downloaded: 3141 file(s) [attempted 3141/8690 = 36%, 77 KB/s], Decompressed: 985
+2026-10-11T14:00:05.2600839Z Downloaded: 3230 file(s) [attempted 3230/8690 = 37%, 211 KB/s], Decompressed: 985
+2026-10-11T14:00:05.3594543Z Downloaded: 3306 file(s) [attempted 3306/8690 = 38%, 364 KB/s], Decompressed: 985
+2026-10-11T14:00:05.4611213Z Downloaded: 3395 file(s) [attempted 3395/8690 = 39%, 212 KB/s], Decompressed: 985
+2026-10-11T14:00:05.5771595Z Downloaded: 3483 file(s) [attempted 3483/8690 = 40%, 136 KB/s], Decompressed: 985
+2026-10-11T14:00:05.6784036Z Downloaded: 3556 file(s) [attempted 3556/8690 = 40%, 1729 KB/s], Decompressed: 985
+2026-10-11T14:00:05.7781520Z Downloaded: 3651 file(s) [attempted 3651/8690 = 42%, 1799 KB/s], Decompressed: 985
+2026-10-11T14:00:05.8824166Z Downloaded: 3723 file(s) [attempted 3723/8690 = 42%, 564 KB/s], Decompressed: 985
+2026-10-11T14:00:05.9900961Z Downloaded: 3812 file(s) [attempted 3812/8690 = 43%, 138 KB/s], Decompressed: 985
+2026-10-11T14:00:06.0912056Z Downloaded: 3905 file(s) [attempted 3905/8690 = 44%, 1078 KB/s], Decompressed: 985
+2026-10-11T14:00:06.1961988Z Downloaded: 3998 file(s) [attempted 3998/8690 = 46%, 1222 KB/s], Decompressed: 985
+2026-10-11T14:00:06.2959101Z Downloaded: 4079 file(s) [attempted 4079/8690 = 46%, 430 KB/s], Decompressed: 985
+2026-10-11T14:00:06.3979227Z Downloaded: 4166 file(s) [attempted 4166/8690 = 47%, 1478 KB/s], Decompressed: 985
+2026-10-11T14:00:06.4981601Z Downloaded: 4252 file(s) [attempted 4252/8690 = 48%, 3033 KB/s], Decompressed: 985
+2026-10-11T14:00:06.6081433Z Downloaded: 4326 file(s) [attempted 4326/8690 = 49%, 3355 KB/s], Decompressed: 985
+2026-10-11T14:00:06.7101975Z Downloaded: 4424 file(s) [attempted 4424/8690 = 50%, 1027 KB/s], Decompressed: 985
+2026-10-11T14:00:06.8121636Z Downloaded: 4510 file(s) [attempted 4510/8690 = 51%, 414 KB/s], Decompressed: 985
+2026-10-11T14:00:06.9110999Z Downloaded: 4599 file(s) [attempted 4599/8690 = 52%, 336 KB/s], Decompressed: 985
+2026-10-11T14:00:07.0154034Z Downloaded: 4685 file(s) [attempted 4685/8690 = 53%, 1100 KB/s], Decompressed: 985
+2026-10-11T14:00:07.1157513Z Downloaded: 4766 file(s) [attempted 4766/8690 = 54%, 358 KB/s], Decompressed: 985
+2026-10-11T14:00:07.2210945Z Downloaded: 4855 file(s) [attempted 4855/8690 = 55%, 1570 KB/s], Decompressed: 985
+2026-10-11T14:00:07.3209917Z Downloaded: 4948 file(s) [attempted 4948/8690 = 56%, 516 KB/s], Decompressed: 985
+2026-10-11T14:00:07.4258601Z Downloaded: 5034 file(s) [attempted 5034/8690 = 57%, 1140 KB/s], Decompressed: 985
+2026-10-11T14:00:07.5264908Z Downloaded: 5120 file(s) [attempted 5120/8690 = 58%, 188 KB/s], Decompressed: 985
+2026-10-11T14:00:07.6515402Z Downloaded: 5211 file(s) [attempted 5211/8690 = 59%, 316 KB/s], Decompressed: 985
+2026-10-11T14:00:07.7609483Z Downloaded: 5274 file(s) [attempted 5274/8690 = 60%, 627 KB/s], Decompressed: 985
+2026-10-11T14:00:07.8770139Z Downloaded: 5323 file(s) [attempted 5323/8690 = 61%, 836 KB/s], Decompressed: 985
+2026-10-11T14:00:07.9784298Z Downloaded: 5423 file(s) [attempted 5423/8690 = 62%, 1844 KB/s], Decompressed: 985
+2026-10-11T14:00:08.0850944Z Downloaded: 5477 file(s) [attempted 5477/8690 = 63%, 4241 KB/s], Decompressed: 985
+2026-10-11T14:00:08.2123510Z Downloaded: 5574 file(s) [attempted 5574/8690 = 64%, 124 KB/s], Decompressed: 985
+2026-10-11T14:00:08.3081533Z Downloaded: 5630 file(s) [attempted 5630/8690 = 64%, 1364 KB/s], Decompressed: 985
+2026-10-11T14:00:08.4106037Z Downloaded: 5724 file(s) [attempted 5724/8690 = 65%, 146 KB/s], Decompressed: 985
+2026-10-11T14:00:08.5171750Z Downloaded: 5779 file(s) [attempted 5779/8690 = 66%, 2570 KB/s], Decompressed: 2366
+2026-10-11T14:00:08.6224736Z Downloaded: 5849 file(s) [attempted 5849/8690 = 67%, 130 KB/s], Decompressed: 2366
+2026-10-11T14:00:08.7297034Z Downloaded: 5947 file(s) [attempted 5947/8690 = 68%, 480 KB/s], Decompressed: 2366
+2026-10-11T14:00:08.8310368Z Downloaded: 6040 file(s) [attempted 6040/8690 = 69%, 346 KB/s], Decompressed: 2366
+2026-10-11T14:00:08.9293523Z Downloaded: 6126 file(s) [attempted 6126/8690 = 70%, 195 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.0615342Z Downloaded: 6210 file(s) [attempted 6210/8690 = 71%, 2366 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.1673475Z Downloaded: 6261 file(s) [attempted 6261/8690 = 72%, 3166 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.2732106Z Downloaded: 6359 file(s) [attempted 6359/8690 = 73%, 134 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.3793970Z Downloaded: 6417 file(s) [attempted 6417/8690 = 73%, 874 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.4798092Z Downloaded: 6508 file(s) [attempted 6508/8690 = 74%, 1896 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.5775126Z Downloaded: 6576 file(s) [attempted 6576/8690 = 75%, 944 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.6804173Z Downloaded: 6669 file(s) [attempted 6669/8690 = 76%, 860 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.7835352Z Downloaded: 6750 file(s) [attempted 6750/8690 = 77%, 1774 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.8861548Z Downloaded: 6837 file(s) [attempted 6837/8690 = 78%, 306 KB/s], Decompressed: 2366
+2026-10-11T14:00:09.9901498Z Downloaded: 6930 file(s) [attempted 6930/8690 = 79%, 161 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.1001951Z Downloaded: 6997 file(s) [attempted 6997/8690 = 80%, 51 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.2002162Z Downloaded: 7090 file(s) [attempted 7090/8690 = 81%, 1609 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.2998605Z Downloaded: 7186 file(s) [attempted 7186/8690 = 82%, 223 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.3994132Z Downloaded: 7270 file(s) [attempted 7270/8690 = 83%, 160 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.5018178Z Downloaded: 7342 file(s) [attempted 7342/8690 = 84%, 3067 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.6022832Z Downloaded: 7435 file(s) [attempted 7435/8690 = 85%, 2355 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.7064947Z Downloaded: 7526 file(s) [attempted 7526/8690 = 86%, 191 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.8096954Z Downloaded: 7607 file(s) [attempted 7607/8690 = 87%, 681 KB/s], Decompressed: 2366
+2026-10-11T14:00:10.9101755Z Downloaded: 7696 file(s) [attempted 7696/8690 = 88%, 946 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.0097234Z Downloaded: 7782 file(s) [attempted 7782/8690 = 89%, 3091 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.1144374Z Downloaded: 7870 file(s) [attempted 7870/8690 = 90%, 347 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.2161518Z Downloaded: 7959 file(s) [attempted 7959/8690 = 91%, 680 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.3144834Z Downloaded: 8041 file(s) [attempted 8041/8690 = 92%, 776 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.4151675Z Downloaded: 8131 file(s) [attempted 8131/8690 = 93%, 783 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.5171835Z Downloaded: 8213 file(s) [attempted 8213/8690 = 94%, 628 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.6229672Z Downloaded: 8297 file(s) [attempted 8297/8690 = 95%, 544 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.7242179Z Downloaded: 8359 file(s) [attempted 8359/8690 = 96%, 343 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.8263530Z Downloaded: 8415 file(s) [attempted 8415/8690 = 96%, 570 KB/s], Decompressed: 2366
+2026-10-11T14:00:11.9271108Z Downloaded: 8513 file(s) [attempted 8513/8690 = 97%, 1090 KB/s], Decompressed: 2366
+2026-10-11T14:00:12.0361451Z Downloaded: 8576 file(s) [attempted 8576/8690 = 98%, 621 KB/s], Decompressed: 2366
+2026-10-11T14:00:12.1128500Z Downloaded: 8671 file(s) [attempted 8671/8690 = 99%, 252 KB/s], Decompressed: 2366
+2026-10-11T14:00:12.1158830Z Downloaded: 8690 file(s) [attempted 8690/8690 = 100%, 252 KB/s], Decompressed: 2366
+2026-10-11T14:00:27.2821539Z Decompressed 8690 file(s)
+2026-10-11T14:00:27.2821859Z Already decompressed 8690 file(s)
+2026-10-11T14:00:27.3375203Z ##[group]Run bash comparator/run-check.sh
+2026-10-11T14:00:27.3375546Z [36;1mbash comparator/run-check.sh[0m
+2026-10-11T14:00:27.3479032Z shell: /usr/bin/bash -e {0}
+2026-10-11T14:00:27.3479486Z env:
+2026-10-11T14:00:27.3479967Z   COMPARATOR_TOOLS: /home/runner/work/_temp/comparator-tools
+2026-10-11T14:00:27.3480728Z ##[endgroup]
+2026-10-11T14:00:27.4418141Z Input check passed: both targets, exact FC copy, 23 unchanged pinned files.
+2026-10-11T14:00:27.5637766Z Running as unit: run-u17.service
+2026-10-11T14:00:28.3001920Z Building Challenge
+2026-10-11T14:00:34.8789189Z ✔ [8706/8713] Built FormalConjecturesForMathlib.Algebra.Group.Action.Pointwise.Set.Basic (2.8s)
+2026-10-11T14:00:35.1792828Z ✔ [8707/8715] Built FormalConjecturesForMathlib.Algebra.GCDMonoid.Finset (3.1s)
+2026-10-11T14:00:35.1796293Z ✔ [8708/8715] Built FormalConjecturesForMathlib.Algebra.GradedMonoid (3.1s)
+2026-10-11T14:00:35.2802352Z ✔ [8709/8716] Built FormalConjecturesForMathlib.Order.Filter.atTopBot.Finset (2.1s)
+2026-10-11T14:00:35.8797959Z ✔ [8710/8716] Built FormalConjecturesForMathlib.Algebra.Group.Indicator (975ms)
+2026-10-11T14:00:36.9818829Z ✔ [8711/8717] Built FormalConjecturesForMathlib.Algebra.MvPolynomial.RegularFunction (1.8s)
+2026-10-11T14:00:37.1815946Z ✔ [8712/8718] Built FormalConjecturesForMathlib.Algebra.MvPolynomial.PoissonBracket (1.0s)
+2026-10-11T14:00:39.7898726Z ✔ [8713/8719] Built FormalConjecturesForMathlib.Algebra.Polynomial.Algebra (2.6s)
+2026-10-11T14:00:40.9932458Z ✔ [8714/8720] Built FormalConjecturesForMathlib.Algebra.Order.Group.Pointwise.Interval (3.9s)
+2026-10-11T14:00:41.1931399Z ✔ [8715/8721] Built FormalConjecturesForMathlib.Algebra.Group.GrowthFunction (5.3s)
+2026-10-11T14:00:41.2928358Z ✔ [8716/8722] Built FormalConjecturesForMathlib.Algebra.Polynomial.Basic (1.5s)
+2026-10-11T14:00:41.5926946Z ✔ [8717/8723] Built FormalConjecturesForMathlib.Algebra.Homology.DerivedCategory.Ext.GradedAlgebra (6.4s)
+2026-10-11T14:00:42.4953730Z ✔ [8718/8724] Built FormalConjecturesForMathlib.Algebra.Polynomial.HasseDeriv (1.5s)
+2026-10-11T14:00:42.6961609Z ✔ [8719/8725] Built FormalConjecturesForMathlib.Algebra.Powerfree (1.6s)
+2026-10-11T14:00:43.2958744Z ✔ [8720/8726] Built FormalConjecturesForMathlib.Algebra.Ring.PythagorasNumber (1.6s)
+2026-10-11T14:00:43.8956184Z ✔ [8721/8727] Built FormalConjecturesForMathlib.Algebra.QuadraticAlgebra.Instances (2.6s)
+2026-10-11T14:00:44.7966077Z ✔ [8722/8728] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.GlobalPeriod (2.3s)
+2026-10-11T14:00:45.2974975Z ✔ [8723/8729] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.MinimalDiscriminant (2.5s)
+2026-10-11T14:00:45.3976799Z ✔ [8724/8730] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.Regulator (2.2s)
+2026-10-11T14:00:46.4032819Z ✔ [8725/8731] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.Tamagawa (2.5s)
+2026-10-11T14:00:47.4005701Z ✔ [8726/8731] Built FormalConjecturesForMathlib.AlgebraicGeometry.ProjectiveSpace (2.7s)
+2026-10-11T14:00:47.5008691Z ✔ [8727/8734] Built FormalConjecturesForMathlib.Analysis.Asymptotics.Basic (2.0s)
+2026-10-11T14:00:47.7012656Z ✔ [8728/8735] Built FormalConjecturesForMathlib.AlgebraicGeometry.VectorBundle (2.4s)
+2026-10-11T14:00:48.0007063Z ✔ [8729/8736] Built FormalConjecturesForMathlib.Analysis.Equidistribution.ModOne (1.6s)
+2026-10-11T14:00:49.2020120Z ✔ [8730/8737] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Group (1.7s)
+2026-10-11T14:00:49.5053433Z ✔ [8731/8738] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Order (1.8s)
+2026-10-11T14:00:50.2087046Z ✔ [8732/8739] Built FormalConjecturesForMathlib.Analysis.Matrix.Spectrum (2.2s)
+2026-10-11T14:00:50.8094445Z ✔ [8733/8739] Built FormalConjecturesForMathlib.Analysis.Fourier.SpectralSets (3.4s)
+2026-10-11T14:00:50.9154834Z ✔ [8734/8740] Built FormalConjecturesForMathlib.Analysis.Real.Cardinality (1.7s)
+2026-10-11T14:00:51.3155100Z ✔ [8735/8740] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.AdditiveCharacter (1.8s)
+2026-10-11T14:00:53.2197113Z ✔ [8736/8743] Built FormalConjecturesForMathlib.Analysis.HasGaps (2.9s)
+2026-10-11T14:00:53.6204219Z ✔ [8737/8744] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.NthRoot (2.7s)
+2026-10-11T14:00:54.0208356Z ✔ [8738/8745] Built FormalConjecturesForMathlib.Combinatorics.AP.Basic (2.7s)
+2026-10-11T14:00:54.5204588Z ✔ [8739/8746] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.Log.Basic (3.7s)
+2026-10-11T14:00:54.8214087Z ✔ [8740/8746] Built FormalConjecturesForMathlib.Order.Filter.Cofinite (1.6s)
+2026-10-11T14:00:55.4270054Z ✔ [8741/8748] Built FormalConjecturesForMathlib.Combinatorics.Additive.Convolution (1.8s)
+2026-10-11T14:00:55.8274393Z ✔ [8742/8749] Built FormalConjecturesForMathlib.Combinatorics.Additive.DifferenceBasis (1.3s)
+2026-10-11T14:00:55.9277079Z ✔ [8743/8750] Built FormalConjecturesForMathlib.Combinatorics.Additive.RestrictedSumset (1.1s)
+2026-10-11T14:00:57.3315258Z ✔ [8744/8751] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.VCDim (1.5s)
+2026-10-11T14:00:58.9375264Z ✔ [8745/8752] Built FormalConjecturesForMathlib.Combinatorics.Digraph.Tournament (1.6s)
+2026-10-11T14:00:59.2404036Z ✔ [8746/8752] Built FormalConjecturesForMathlib.Combinatorics.Additive.Basis (3.8s)
+2026-10-11T14:01:01.6437156Z ✔ [8747/8753] Built FormalConjecturesForMathlib.Combinatorics.Hypergraph.ThreeUniform (2.4s)
+2026-10-11T14:01:02.4468738Z ✔ [8748/8754] Built FormalConjecturesForMathlib.Combinatorics.Additive.Coset (8.4s)
+2026-10-11T14:01:03.2482132Z ✔ [8749/8756] Built FormalConjecturesForMathlib.Combinatorics.LatinSquare (1.6s)
+2026-10-11T14:01:03.9479647Z ✔ [8750/8758] Built FormalConjecturesForMathlib.Combinatorics.Additive.VCDim (5.1s)
+2026-10-11T14:01:04.5481175Z ✔ [8751/8758] Built FormalConjecturesForMathlib.Combinatorics.Ramsey (1.3s)
+2026-10-11T14:01:04.7479644Z ✔ [8752/8758] Built FormalConjecturesForMathlib.Combinatorics.LimitObjects.Graphon (2.3s)
+2026-10-11T14:01:04.8476289Z ✔ [8753/8761] Built FormalConjecturesForMathlib.Combinatorics.Basic (8.0s)
+2026-10-11T14:01:05.0484049Z ✔ [8754/8761] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.PropertyB (1.1s)
+2026-10-11T14:01:05.8488819Z ✔ [8755/8761] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.Sunflower (1.3s)
+2026-10-11T14:01:06.8506984Z ✔ [8756/8764] Built FormalConjecturesForMathlib.Combinatorics.Ramsey.Diagonal (2.1s)
+2026-10-11T14:01:07.1530539Z ✔ [8757/8765] Built FormalConjecturesForMathlib.Data.Set.Triplewise (2.1s)
+2026-10-11T14:01:07.2533951Z ✔ [8758/8765] Built FormalConjecturesForMathlib.Combinatorics.SetTheory.PartitionRelation (1.4s)
+2026-10-11T14:01:07.3540855Z ✔ [8759/8766] Built FormalConjecturesForMathlib.Combinatorics.LimitObjects.Tournamenton (2.5s)
+2026-10-11T14:01:08.4548543Z ✔ [8760/8767] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Balanced (1.3s)
+2026-10-11T14:01:08.5545237Z ✔ [8761/8769] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.UnionFree (1.3s)
+2026-10-11T14:01:08.6552606Z ✔ [8762/8770] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Circumference (1.3s)
+2026-10-11T14:01:09.1553270Z ✔ [8763/8771] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Degrees (2.2s)
+2026-10-11T14:01:09.8572935Z ✔ [8764/8772] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.CompleteGraphEdgeCount (1.3s)
+2026-10-11T14:01:10.2594481Z ✔ [8765/8772] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Clique (1.9s)
+2026-10-11T14:01:10.4602523Z ✔ [8766/8773] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Connectivity (1.8s)
+2026-10-11T14:01:10.8643743Z ✔ [8767/8774] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Cvetkovic (1.8s)
+2026-10-11T14:01:11.5708390Z ✔ [8768/8774] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.AnnihilationNumber (1.7s)
+2026-10-11T14:01:11.7711558Z ✔ [8769/8776] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Cycle (1.5s)
+2026-10-11T14:01:11.7713174Z ✔ [8770/8776] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.CycleRank (1.3s)
+2026-10-11T14:01:12.7745212Z ✔ [8771/8776] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Decomposition (1.2s)
+2026-10-11T14:01:13.3810959Z ✔ [8772/8779] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Degeneracy (1.6s)
+2026-10-11T14:01:13.4813497Z ✔ [8773/8780] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.DiamExtra (1.7s)
+2026-10-11T14:01:14.4823560Z ✔ [8774/8781] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Coloring.Vertex (3.6s)
+2026-10-11T14:01:14.5825192Z ✔ [8775/8782] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Domination (1.8s)
+2026-10-11T14:01:14.7827997Z ✔ [8776/8783] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.EdgeColouring (1.3s)
+2026-10-11T14:01:16.0843235Z ✔ [8777/8784] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.FractionalAlpha (1.6s)
+2026-10-11T14:01:16.1847014Z ✔ [8778/8785] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.HarmonicIndex (1.6s)
+2026-10-11T14:01:16.5854367Z ✔ [8779/8785] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.VertexDistance (3.2s)
+2026-10-11T14:01:16.8846259Z ✔ [8780/8787] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.HomDensity (2.1s)
+2026-10-11T14:01:17.3855793Z ✔ [8781/8787] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Hypercube (1.3s)
+2026-10-11T14:01:17.7883716Z ✔ [8782/8790] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Independence (1.6s)
+2026-10-11T14:01:18.1881977Z ✔ [8783/8791] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Induced (1.6s)
+2026-10-11T14:01:19.0882302Z ✔ [8784/8792] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Eccentricity (2.2s)
+2026-10-11T14:01:19.0883771Z ✔ [8785/8792] Built FormalConjecturesForMathlib.Data.Finset.Card (1.2s)
+2026-10-11T14:01:19.8908250Z ✔ [8786/8793] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.LargestInducedTree (2.5s)
+2026-10-11T14:01:20.8918779Z ✔ [8787/8794] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Johnson (1.8s)
+2026-10-11T14:01:21.3928321Z ✔ [8788/8794] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Matching (2.4s)
+2026-10-11T14:01:21.4932068Z ✔ [8789/8795] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.PathCover (1.6s)
+2026-10-11T14:01:21.5933066Z ✔ [8790/8796] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.LovaszTheta (3.4s)
+2026-10-11T14:01:22.9946553Z ✔ [8791/8798] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Prod (1.6s)
+2026-10-11T14:01:22.9948172Z ✔ [8792/8798] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.QuasiLineGraph (1.6s)
+2026-10-11T14:01:23.1949522Z ✔ [8793/8799] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Ramsey (1.6s)
+2026-10-11T14:01:23.5954176Z ✔ [8794/8800] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.InducedTreeNeighborhood (2.7s)
+2026-10-11T14:01:24.4964076Z ✔ [8795/8801] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Residue (1.5s)
+2026-10-11T14:01:24.5973584Z ✔ [8796/8802] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SizeRamsey (1.3s)
+2026-10-11T14:01:24.7976354Z ✔ [8797/8802] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Saturation (1.8s)
+2026-10-11T14:01:25.0984766Z ✔ [8798/8805] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SpanningTree (1.5s)
+2026-10-11T14:01:25.7992652Z ✔ [8799/8806] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SubgraphIsomorphism (1.3s)
+2026-10-11T14:01:26.0985914Z ✔ [8800/8807] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Temperature (1.3s)
+2026-10-11T14:01:26.6005165Z ✔ [8801/8808] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SzegedIndex (2.0s)
+2026-10-11T14:01:27.1016047Z ✔ [8802/8809] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.WellTotallyDominated (1.3s)
+2026-10-11T14:01:27.2042518Z ✔ [8803/8810] Built FormalConjecturesForMathlib.Geometry.Euclidean (2.1s)
+2026-10-11T14:01:27.8065534Z ✔ [8804/8811] Built FormalConjecturesForMathlib.Combinatorics.YoungDiagram (1.2s)
+2026-10-11T14:01:28.3078526Z ✔ [8805/8812] Built FormalConjecturesForMathlib.Computability.AutomaticSequence (1.2s)
+2026-10-11T14:01:28.4113016Z ✔ [8806/8812] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.WienerIndex (2.3s)
+2026-10-11T14:01:29.3126787Z ✔ [8807/8815] Built FormalConjecturesForMathlib.Computability.BitstringEncoding (2.1s)
+2026-10-11T14:01:29.7127140Z ✔ [8808/8817] Built FormalConjecturesForMathlib.Computability.DFA (1.4s)
+2026-10-11T14:01:29.7130830Z ✔ [8809/8817] Built FormalConjecturesForMathlib.Computability.Primrec (1.4s)
+2026-10-11T14:01:30.1129604Z ✔ [8810/8818] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.UnitDistancePlaneGraph (2.3s)
+2026-10-11T14:01:30.5132847Z ✔ [8811/8819] Built FormalConjecturesForMathlib.Data.Bool.Basic (773ms)
+2026-10-11T14:01:30.7162764Z ✔ [8812/8820] Built FormalConjecturesForMathlib.Computability.Complexity (1.5s)
+2026-10-11T14:01:31.1172343Z ✔ [8813/8821] Built FormalConjecturesForMathlib.Computability.TuringMachine.PostTuringMachine (1.4s)
+2026-10-11T14:01:31.4214545Z ✔ [8814/8822] Built FormalConjecturesForMathlib.Data.Finset.Powerset (1.3s)
+2026-10-11T14:01:31.7209339Z ✔ [8815/8823] Built FormalConjecturesForMathlib.Data.Finset.ReciprocalSum (1.2s)
+2026-10-11T14:01:31.7210953Z ✔ [8816/8823] Built FormalConjecturesForMathlib.Data.Int.IntermediateValue (913ms)
+2026-10-11T14:01:31.8222121Z ✔ [8817/8824] Built FormalConjecturesForMathlib.Data.Int.Order.Basic (734ms)
+2026-10-11T14:01:32.6275241Z ✔ [8818/8825] Built FormalConjecturesForMathlib.Data.Nat.Init (815ms)
+2026-10-11T14:01:33.3304211Z ✔ [8819/8826] Built FormalConjecturesForMathlib.Data.Nat.Factorization.Basic (1.6s)
+2026-10-11T14:01:33.5319108Z ✔ [8820/8827] Built FormalConjecturesForMathlib.Computability.TuringMachine.BusyBeavers (2.1s)
+2026-10-11T14:01:33.6357323Z ✔ [8821/8828] Built FormalConjecturesForMathlib.Data.Nat.Full (1.9s)
+2026-10-11T14:01:34.5377424Z ✔ [8822/8828] Built FormalConjecturesForMathlib.Data.Nat.MaxPrimeFac (1.9s)
+2026-10-11T14:01:34.6380366Z ✔ [8823/8829] Built FormalConjecturesForMathlib.Data.Nat.Prime.Composite (1.2s)
+2026-10-11T14:01:35.6391360Z ✔ [8824/8830] Built FormalConjecturesForMathlib.Data.Nat.Prime.Defs (1.1s)
+2026-10-11T14:01:35.9413341Z ✔ [8825/8831] Built FormalConjecturesForMathlib.Data.Nat.Prime.Finset (1.3s)
+2026-10-11T14:01:36.3432290Z ✔ [8826/8832] Built FormalConjecturesForMathlib.Data.Nat.PerfectPower (3.0s)
+2026-10-11T14:01:36.8424391Z ✔ [8827/8832] Built FormalConjecturesForMathlib.Data.Nat.Prime.Infinite (1.2s)
+2026-10-11T14:01:37.4431717Z ✔ [8828/8834] Built FormalConjecturesForMathlib.Computability.TuringMachine.Notation (3.8s)
+2026-10-11T14:01:38.0463794Z ✔ [8829/8836] Built FormalConjecturesForMathlib.Data.Real.NearestInt (1.3s)
+2026-10-11T14:01:38.5469555Z ✔ [8830/8837] Built FormalConjecturesForMathlib.Data.Real.Constants (2.2s)
+2026-10-11T14:01:38.6471122Z ✔ [8831/8838] Built FormalConjecturesForMathlib.Data.Set.Interval (1.2s)
+2026-10-11T14:01:38.7509623Z ✔ [8832/8839] Built FormalConjecturesForMathlib.Data.Nat.Squarefree (2.8s)
+2026-10-11T14:01:39.4518539Z ✔ [8833/8840] Built FormalConjecturesForMathlib.Order.Interval.Finset.Basic (1.4s)
+2026-10-11T14:01:39.7533855Z ✔ [8834/8841] Built FormalConjecturesForMathlib.Order.Interval.Finset.Nat (1.3s)
+2026-10-11T14:01:39.8539682Z ✔ [8835/8842] Built FormalConjecturesForMathlib.Data.Sym.Sym2 (1.1s)
+2026-10-11T14:01:40.0537746Z ✔ [8836/8842] Built FormalConjecturesForMathlib.Data.ZMod.Fp (1.3s)
+2026-10-11T14:01:40.5544345Z ✔ [8837/8843] Built FormalConjecturesForMathlib.Data.ZMod.PerfectDifferenceSet (1.1s)
+2026-10-11T14:01:41.8590482Z ✔ [8838/8844] Built FormalConjecturesForMathlib.Dynamics.SymbolicDynamics.BlockComplexity (2.1s)
+2026-10-11T14:01:42.2624915Z ✔ [8839/8844] Built FormalConjecturesForMathlib.FieldTheory.MvRatFunc.Defs (1.7s)
+2026-10-11T14:01:43.9662448Z ✔ [8840/8847] Built FormalConjecturesForMathlib.FieldTheory.MilnorKTheory (3.9s)
+2026-10-11T14:01:44.1655437Z ✔ [8841/8848] Built FormalConjecturesForMathlib.Data.Set.Density (4.4s)
+2026-10-11T14:01:44.7676885Z ✔ [8842/8849] Built FormalConjecturesForMathlib.Geometry.Metric (2.4s)
+2026-10-11T14:01:45.0681032Z ✔ [8843/8850] Built FormalConjecturesForMathlib.Logic.Equiv.Fin.Rotate (1.1s)
+2026-10-11T14:01:45.3688065Z ✔ [8844/8851] Built FormalConjecturesForMathlib.Geometry.Manifold.LieGroupPresentation (3.5s)
+2026-10-11T14:01:45.5691793Z ✔ [8845/8851] Built FormalConjecturesForMathlib.Lean.Elab.InfoTree.Util (491ms)
+2026-10-11T14:01:46.3699491Z ✔ [8846/8852] Built FormalConjecturesForMathlib.GroupTheory.Torsion (1.6s)
+2026-10-11T14:01:46.4704735Z ✔ [8847/8852] Built FormalConjecturesForMathlib.Geometry.«3d» (2.3s)
+2026-10-11T14:01:47.0697411Z ✔ [8848/8856] Built FormalConjecturesForMathlib.LinearAlgebra.AffineSpace.Simplex.Basic (1.5s)
+2026-10-11T14:01:48.3712507Z ✔ [8849/8858] Built FormalConjecturesForMathlib.LinearAlgebra.GeneralLinearGroup (1.0s)
+2026-10-11T14:01:48.7707848Z ✔ [8850/8859] Built FormalConjecturesForMathlib.LinearAlgebra.QuadraticForm.UInvariant (2.2s)
+2026-10-11T14:01:48.7709218Z ✔ [8851/8859] Built FormalConjecturesForMathlib.ModelTheory.Encoding (1.7s)
+2026-10-11T14:01:50.2773420Z ✔ [8852/8859] Built FormalConjecturesForMathlib.NumberTheory.AdditiveComplement (1.5s)
+2026-10-11T14:01:50.8779894Z ✔ [8853/8859] Built FormalConjecturesForMathlib.NumberTheory.AdditionChain (2.1s)
+2026-10-11T14:01:50.9782068Z ✔ [8854/8860] Built FormalConjecturesForMathlib.LinearAlgebra.SpecialLinearGroup (2.6s)
+2026-10-11T14:01:51.5786805Z ✔ [8855/8861] Built FormalConjecturesForMathlib.Geometry.«2d» (6.2s)
+2026-10-11T14:01:52.3834595Z ✔ [8856/8861] Built FormalConjecturesForMathlib.ModelTheory.Real (2.2s)
+2026-10-11T14:01:52.4840650Z ✔ [8857/8863] Built FormalConjecturesForMathlib.ModelTheory.Decidability (1.7s)
+2026-10-11T14:01:53.1846150Z ✔ [8858/8867] Built FormalConjecturesForMathlib.NumberTheory.AlmostPrime (1.5s)
+2026-10-11T14:01:53.2852468Z ✔ [8859/8868] Built FormalConjecturesForMathlib.NumberTheory.AdditivelyComplete (2.3s)
+2026-10-11T14:01:53.8843479Z ✔ [8860/8869] Built FormalConjecturesForMathlib.NumberTheory.Amicable (1.5s)
+2026-10-11T14:01:54.0851039Z ✔ [8861/8870] Built FormalConjecturesForMathlib.NumberTheory.NormalNumber (1.6s)
+2026-10-11T14:01:55.2914905Z ✔ [8862/8871] Built FormalConjecturesForMathlib.NumberTheory.BeurlingPrimes (1.4s)
+2026-10-11T14:01:57.2961410Z ✔ [8863/8871] Built FormalConjecturesForMathlib.NumberTheory.AutomaticNumber (2.1s)
+2026-10-11T14:01:59.6059506Z ✔ [8864/8872] Built FormalConjecturesForMathlib.NumberTheory.CoveringSystem (2.3s)
+2026-10-11T14:02:00.0065938Z ✔ [8865/8873] Built FormalConjecturesForMathlib.NumberTheory.Carmichael (5.0s)
+2026-10-11T14:02:00.9074847Z ✔ [8866/8874] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.Subgroups (7.6s)
+2026-10-11T14:02:01.7082937Z ✔ [8867/8875] Built FormalConjecturesForMathlib.NumberTheory.DiophantineApproximation.ZNumber (2.1s)
+2026-10-11T14:02:02.5153255Z ✔ [8868/8876] Built FormalConjecturesForMathlib.NumberTheory.DirichletCharacter.Basic (2.5s)
+2026-10-11T14:02:02.9162860Z ✔ [8869/8877] Built FormalConjecturesForMathlib.NumberTheory.Divisors (2.0s)
+2026-10-11T14:02:03.9177511Z ✔ [8870/8878] Built FormalConjecturesForMathlib.NumberTheory.Harmonic (1.4s)
+2026-10-11T14:02:04.0174171Z ✔ [8871/8879] Built FormalConjecturesForMathlib.NumberTheory.ExpansionEntropy (2.3s)
+2026-10-11T14:02:04.2182332Z ✔ [8872/8880] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.LieDeriv (11s)
+2026-10-11T14:02:04.8183765Z ✔ [8873/8881] Built FormalConjecturesForMathlib.NumberTheory.Lacunary (1.9s)
+2026-10-11T14:02:05.7197472Z ✔ [8874/8881] Built FormalConjecturesForMathlib.NumberTheory.LegendreSymbol.Basic (1.8s)
+2026-10-11T14:02:05.9194912Z ✔ [8875/8882] Built FormalConjecturesForMathlib.NumberTheory.NumberField.FundamentalDiscriminant (1.7s)
+2026-10-11T14:02:06.1202836Z ✔ [8876/8883] Built FormalConjecturesForMathlib.NumberTheory.MultiplicativelyIndependent (2.1s)
+2026-10-11T14:02:07.4212030Z ✔ [8877/8884] Built FormalConjecturesForMathlib.NumberTheory.PracticalNumbers (1.3s)
+2026-10-11T14:02:07.7215776Z ✔ [8878/8885] Built FormalConjecturesForMathlib.NumberTheory.NumberField.Quadratic (2.0s)
+2026-10-11T14:02:08.6224965Z ✔ [8879/8887] Built FormalConjecturesForMathlib.NumberTheory.PisotNumber (2.7s)
+2026-10-11T14:02:08.6226393Z ✔ [8880/8887] Built FormalConjecturesForMathlib.NumberTheory.PrimeGap (1.2s)
+2026-10-11T14:02:09.3232605Z ✔ [8881/8888] Built FormalConjecturesForMathlib.NumberTheory.Primitive (1.6s)
+2026-10-11T14:02:09.7228951Z ✔ [8882/8889] Built FormalConjecturesForMathlib.NumberTheory.SierpinskiNumber (1.1s)
+2026-10-11T14:02:10.5268787Z ✔ [8883/8890] Built FormalConjecturesForMathlib.NumberTheory.SmoothScale (1.9s)
+2026-10-11T14:02:10.9285239Z ✔ [8884/8891] Built FormalConjecturesForMathlib.NumberTheory.WieferichPrime (1.2s)
+2026-10-11T14:02:11.5291580Z ✔ [8885/8892] Built FormalConjecturesForMathlib.Order.Bounds.Basic (1.0s)
+2026-10-11T14:02:11.8335016Z ✔ [8886/8892] Built FormalConjecturesForMathlib.Order.Nat (915ms)
+2026-10-11T14:02:11.9337200Z ✔ [8887/8894] Built FormalConjecturesForMathlib.NumberTheory.WallSunSunPrimes (2.6s)
+2026-10-11T14:02:12.7345552Z ✔ [8888/8896] Built FormalConjecturesForMathlib.Order.Unimodular (1.2s)
+2026-10-11T14:02:13.1350039Z ✔ [8889/8899] Built FormalConjecturesForMathlib.Probability.FiniteMethod (1.3s)
+2026-10-11T14:02:13.9343664Z ✔ [8890/8900] Built FormalConjecturesForMathlib.RingTheory.Bialgebra.TrivialModule (1.0s)
+2026-10-11T14:02:14.3351579Z ✔ [8891/8901] Built FormalConjecturesForMathlib.RingTheory.Ideal.Defs (1.2s)
+2026-10-11T14:02:14.7352962Z ✔ [8892/8902] Built FormalConjecturesForMathlib.RingTheory.SystemOfParameters (1.0s)
+2026-10-11T14:02:16.3421355Z ✔ [8893/8902] Built FormalConjecturesForMathlib.RingTheory.Ideal.Basic (1.6s)
+2026-10-11T14:02:17.1436925Z ✔ [8894/8903] Built FormalConjecturesForMathlib.RingTheory.IntersectionMultiplicity (2.8s)
+2026-10-11T14:02:18.4465061Z ✔ [8895/8903] Built FormalConjecturesForMathlib.RingTheory.Bialgebra.Cohomology (4.4s)
+2026-10-11T14:02:19.1473444Z ✔ [8896/8904] Built FormalConjecturesForMathlib.RingTheory.MvPolynomial.LexPlusPowers (2.8s)
+2026-10-11T14:02:19.8498803Z ✔ [8897/8904] Built FormalConjecturesForMathlib.RingTheory.CohenMacaulayModule (2.7s)
+2026-10-11T14:02:19.9500691Z ✔ [8898/8905] Built FormalConjecturesForMathlib.RingTheory.Noetherian.Defs (1.6s)
+2026-10-11T14:02:20.6508108Z ✔ [8899/8906] Built FormalConjecturesForMathlib.RingTheory.Ideal.Maximal (1.5s)
+2026-10-11T14:02:21.5509544Z ✔ [8900/8907] Built FormalConjecturesForMathlib.SetTheory.Cardinal.Arithmetic (1.6s)
+2026-10-11T14:02:21.9504494Z ✔ [8901/8908] Built FormalConjecturesForMathlib.SetTheory.Cardinal.Continuum (1.3s)
+2026-10-11T14:02:22.4533108Z ✔ [8902/8909] Built FormalConjecturesForMathlib.RingTheory.Valuation.LocalUniformization (2.6s)
+2026-10-11T14:02:22.6543403Z ✔ [8903/8910] Built FormalConjecturesForMathlib.Tactic.Linter.Term (716ms)
+2026-10-11T14:02:22.8545220Z ✔ [8904/8911] Built FormalConjecturesForMathlib.SetTheory.Cardinal.SimpleGraph (1.3s)
+2026-10-11T14:02:23.7557036Z ✔ [8905/8912] Built FormalConjecturesForMathlib.Topology.AbsoluteNeighborhoodRetract (1.3s)
+2026-10-11T14:02:24.3615834Z ✔ [8906/8913] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Real (1.7s)
+2026-10-11T14:02:24.5619371Z ✔ [8907/8914] Built FormalConjecturesForMathlib.Topology.CardinalInvariants (1.7s)
+2026-10-11T14:02:25.0659466Z ✔ [8908/8916] Built FormalConjecturesForMathlib.Topology.Discrete (1.3s)
+2026-10-11T14:02:25.1628090Z ✔ [8909/8916] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.CenterAction (20s)
+2026-10-11T14:02:25.5633202Z ✔ [8910/8918] Built FormalConjecturesForMathlib.Topology.GDelta (1.2s)
+2026-10-11T14:02:25.7636824Z ✔ [8911/8918] Built FormalConjecturesForMathlib.Topology.Homogeneous (1.2s)
+2026-10-11T14:02:26.1644757Z ✔ [8912/8918] Built FormalConjecturesUtil.Answer.Syntax (372ms)
+2026-10-11T14:02:26.2649534Z ✔ [8913/8922] Built FormalConjecturesForMathlib.Topology.LebesgueCoveringDimension (1.3s)
+2026-10-11T14:02:26.4654359Z ✔ [8914/8927] Built FormalConjecturesForMathlib.Topology.MetricSpace.MetricSeparated (1.4s)
+2026-10-11T14:02:27.0683513Z ✔ [8915/8929] Built FormalConjecturesUtil.Answer (954ms)
+2026-10-11T14:02:27.0688019Z ✔ [8916/8929] Built FormalConjecturesUtil.Linters.CopyrightLinter (652ms)
+2026-10-11T14:02:27.8723872Z ✔ [8917/8931] Built FormalConjecturesUtil.Linters.ExistsImplicationLinter (799ms)
+2026-10-11T14:02:28.5785000Z ✔ [8918/8932] Built FormalConjecturesUtil.Linters.ImportLinter (1.4s)
+2026-10-11T14:02:29.0814986Z ✔ [8920/8936] Built FormalConjecturesUtil.Attributes.AMS (2.8s)
+2026-10-11T14:02:29.2823006Z ✔ [8921/8936] Built FormalConjecturesUtil.Linters.LatexDocstringLinter (1.4s)
+2026-10-11T14:02:29.8822917Z ✔ [8922/8936] Built FormalConjecturesUtil.Linters.ModuleDocstringLinter (1.3s)
+2026-10-11T14:02:30.0819225Z ✔ [8923/8936] Built FormalConjecturesUtil.Linters.NamespaceLinter (931ms)
+2026-10-11T14:02:30.4845039Z ✔ [8924/8936] Built FormalConjecturesUtil.Linters.StubLinter (649ms)
+2026-10-11T14:02:31.8878343Z ✔ [8925/8936] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet (6.3s)
+2026-10-11T14:02:32.1901765Z ✔ [8926/8936] Built FormalConjecturesUtil.Attributes.Basic (2.9s)
+2026-10-11T14:02:33.5913954Z ✔ [8927/8936] Built FormalConjecturesUtil.Linters.CategoryDocstringLinter (1.4s)
+2026-10-11T14:02:33.8929327Z ✔ [8928/8936] Built FormalConjecturesUtil.Linters.CategoryLinter (1.7s)
+2026-10-11T14:02:33.9925699Z ✔ [8929/8936] Built FormalConjecturesUtil.Linters.FormalProofLinter (1.8s)
+2026-10-11T14:02:34.7939306Z ✔ [8930/8936] Built FormalConjecturesUtil.Linters.CategoryAnswerLinter (1.2s)
+2026-10-11T14:02:35.1933520Z ✔ [8931/8936] Built FormalConjecturesUtil.Linters.AnswerLinter (1.3s)
+2026-10-11T14:02:35.5937419Z ✔ [8932/8936] Built FormalConjecturesForMathlib (3.8s)
+2026-10-11T14:02:35.5938696Z ✔ [8933/8936] Built FormalConjecturesUtil.Linters.AMSLinter (1.6s)
+2026-10-11T14:02:38.4968538Z ✔ [8934/8936] Built FormalConjecturesUtil (2.9s)
+2026-10-11T14:02:41.9998538Z ⚠ [8935/8936] Built Challenge (3.3s)
+2026-10-11T14:02:41.9999381Z warning: Challenge.lean:82:8: declaration uses `sorry`
+2026-10-11T14:02:42.0000051Z warning: Challenge.lean:95:8: declaration uses `sorry`
+2026-10-11T14:02:42.0180858Z Build completed successfully (8936 jobs).
+2026-10-11T14:02:47.7108748Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BapatLal.qPermanentMonotonicity, BapatLal.qPermanentHalfLineMonotonicity, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+2026-10-11T14:02:47.7111461Z Building Bapat
+2026-10-11T14:02:53.6692780Z ℹ [8935/8956] Built Bapat.ColorCount (2.0s)
+2026-10-11T14:02:53.6694620Z info: Bapat/ColorCount.lean:112:0: 'Bapat.colorMatching_card_ite' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:02:54.6722641Z ℹ [8936/8956] Built Bapat.Basic (3.0s)
+2026-10-11T14:02:54.6723910Z info: Bapat/Basic.lean:114:0: 'Bapat.not_bapatMonotonicity_of_psd_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:02:56.8731452Z ℹ [8937/8956] Built Bapat.PermutationReality (2.2s)
+2026-10-11T14:02:56.8732613Z info: Bapat/PermutationReality.lean:95:0: 'Bapat.complexQPermanent_eq_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:02:58.1744799Z ✔ [8938/8956] Built Bapat.Statement (5.2s)
+2026-10-11T14:03:00.4760070Z ℹ [8939/8956] Built Bapat.RankTwoPermanent (3.6s)
+2026-10-11T14:03:00.4761573Z info: Bapat/RankTwoPermanent.lean:127:0: 'Bapat.gram_permanent_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:03:04.8807672Z ℹ [8940/8956] Built Bapat.PairMinorIdentity (7.0s)
+2026-10-11T14:03:04.8808394Z info: Bapat/PairMinorIdentity.lean:145:0: 'Bapat.endpointDerivative_pairMinorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:03:04.8809509Z info: Bapat/PairMinorIdentity.lean:146:0: 'Bapat.rowPairs_144_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:21.5557655Z ℹ [8941/8956] Built Bapat.Certificate (89s)
+2026-10-11T14:04:21.5558527Z info: Bapat/Certificate.lean:221:0: 'Bapat.Certificate.exact_coefficients' does not depend on any axioms
+2026-10-11T14:04:21.5559702Z info: Bapat/Certificate.lean:222:0: 'Bapat.Certificate.strict_margin' does not depend on any axioms
+2026-10-11T14:04:21.5570871Z info: Bapat/Certificate.lean:223:0: 'Bapat.Certificate.endpoint_numerator_negative' does not depend on any axioms
+2026-10-11T14:04:24.3648293Z ℹ [8942/8956] Built Bapat.CoefficientAlgebra (2.7s)
+2026-10-11T14:04:24.3649808Z info: Bapat/CoefficientAlgebra.lean:111:0: 'Bapat.Certificate.asPolynomial_mulLinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:24.3651991Z info: Bapat/CoefficientAlgebra.lean:112:0: 'Bapat.Certificate.asPolynomial_weighted_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:25.3659161Z ℹ [8943/8956] Built Bapat.Witness (3.7s)
+2026-10-11T14:04:25.3659820Z info: Bapat/Witness.lean:63:0: 'Bapat.gramWitness_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:25.3660828Z info: Bapat/Witness.lean:64:0: 'Bapat.explicitPositiveWitness_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:25.3661670Z info: Bapat/Witness.lean:65:0: 'Bapat.not_bapatMonotonicity_of_endpoint_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:28.2692427Z ℹ [8944/8956] Built Bapat.Shape (6.6s)
+2026-10-11T14:04:28.2692988Z info: Bapat/Shape.lean:14:0: 'Bapat.Certificate.coefficient_shape' does not depend on any axioms
+2026-10-11T14:04:30.2746294Z ℹ [8945/8956] Built Bapat.PolynomialCertificate (2.1s)
+2026-10-11T14:04:30.2747712Z info: Bapat/PolynomialCertificate.lean:107:0: 'Bapat.Certificate.certificate_polynomials' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:32.0771308Z ℹ [8946/8956] Built Bapat.NormCertificate (1.8s)
+2026-10-11T14:04:32.0772539Z info: Bapat/NormCertificate.lean:59:0: 'Bapat.Certificate.expectedP_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:32.0773611Z info: Bapat/NormCertificate.lean:60:0: 'Bapat.Certificate.expectedS_eq_polynomialNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:34.3810539Z ℹ [8947/8956] Built Bapat.WedgePolynomial (2.2s)
+2026-10-11T14:04:34.3811314Z info: Bapat/WedgePolynomial.lean:127:0: 'Bapat.Certificate.certificate_wedgePolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:34.3812249Z info: Bapat/WedgePolynomial.lean:128:0: 'Bapat.Certificate.certificate_wedgeNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:36.3823447Z ℹ [8948/8956] Built Bapat.RankTwoReduction (2.1s)
+2026-10-11T14:04:36.3824123Z info: Bapat/RankTwoReduction.lean:58:0: 'Bapat.rankTwoGram_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:36.3824966Z info: Bapat/RankTwoReduction.lean:59:0: 'Bapat.not_bapatMonotonicity_of_rankTwo_norms' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:38.8892428Z ℹ [8949/8956] Built Bapat.PermanentCertificate (2.5s)
+2026-10-11T14:04:38.8893694Z info: Bapat/PermanentCertificate.lean:55:0: 'Bapat.gramWitness_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:38.8895222Z info: Bapat/PermanentCertificate.lean:56:0: 'Bapat.gramWitness_permanent_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:38.8896770Z info: Bapat/PermanentCertificate.lean:57:0: 'Bapat.not_bapatMonotonicity_of_minor_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:39.6908895Z ℹ [8950/8956] Built Bapat.ComplementPermanent (3.3s)
+2026-10-11T14:04:39.6909606Z info: Bapat/ComplementPermanent.lean:162:0: 'Bapat.pairMatchingFinEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:45.1980879Z info: Bapat/ComplementPermanent.lean:163:0: 'Bapat.remainingGram_matching_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:45.1982082Z info: Bapat/ComplementPermanent.lean:268:0: 'Bapat.pairMinorGram_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:45.1983132Z ℹ [8951/8956] Built Bapat.PairPolynomial (5.5s)
+2026-10-11T14:04:45.1983958Z info: Bapat/PairPolynomial.lean:190:0: 'Bapat.pairPolynomial_gramFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:45.1985117Z info: Bapat/PairPolynomial.lean:192:0: 'Bapat.pairPolynomial_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:45.1986162Z info: Bapat/PairPolynomial.lean:193:0: 'Bapat.Certificate.weightedBy_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:47.3987875Z ℹ [8952/8956] Built Bapat.Counterexample (2.1s)
+2026-10-11T14:04:47.3988663Z info: Bapat/Counterexample.lean:85:0: 'Bapat.gramWitness_minorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:47.3989469Z info: Bapat/Counterexample.lean:86:0: 'Bapat.gramWitness_endpoint_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:47.3990529Z info: Bapat/Counterexample.lean:87:0: 'Bapat.exists_positive_definite_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:47.3991363Z info: Bapat/Counterexample.lean:88:0: 'Bapat.not_bapatMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:47.3992137Z info: Bapat/Counterexample.lean:89:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:54.7050583Z ℹ [8953/8956] Built Bapat.Main (7.4s)
+2026-10-11T14:04:54.7051544Z info: Bapat/Main.lean:38:0: 'BapatLal.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:54.7052786Z info: Bapat/Main.lean:39:0: 'Bapat.exists_decreasing_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:04:58.6128516Z ℹ [8954/8956] Built Bapat.DaFonseca (3.9s)
+2026-10-11T14:04:58.6129181Z info: Bapat/DaFonseca.lean:37:0: 'BapatLal.qPermanentHalfLineMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-11T14:05:02.4185566Z ✔ [8955/8956] Built Bapat (3.6s)
+2026-10-11T14:05:02.4352748Z Build completed successfully (8956 jobs).
+2026-10-11T14:06:48.3935290Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BapatLal.qPermanentMonotonicity, BapatLal.qPermanentHalfLineMonotonicity, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Bapat
+2026-10-11T14:06:48.3936876Z Running Lean default kernel on solution.
+2026-10-11T14:06:48.3937185Z Lean default kernel accepts the solution
+2026-10-11T14:06:48.3937458Z Your solution is okay!
+2026-10-11T14:06:48.4271196Z Finished with result: success
+2026-10-11T14:06:48.4271935Z Main processes terminated with: code=exited/status=0
+2026-10-11T14:06:48.4272572Z Service runtime: 6min 20.849s
+2026-10-11T14:06:48.4273016Z CPU time consumed: 12min 59.152s
+2026-10-11T14:06:48.4273487Z Memory peak: 7.0M
+2026-10-11T14:06:48.4273866Z Memory swap peak: 0B
+2026-10-11T14:06:48.4356800Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-11T14:06:48.4357208Z with:
+2026-10-11T14:06:48.4357465Z   name: comparator-38145168157-1
+2026-10-11T14:06:48.4357730Z   path: comparator-receipt/
+2026-10-11T14:06:48.4357990Z   if-no-files-found: warn
+2026-10-11T14:06:48.4358216Z   retention-days: 90
+2026-10-11T14:06:48.4358431Z   compression-level: 6
+2026-10-11T14:06:48.4358639Z   overwrite: false
+2026-10-11T14:06:48.4358849Z   include-hidden-files: false
+2026-10-11T14:06:48.4359090Z ##[endgroup]
+2026-10-11T14:06:48.7409731Z (node:6807) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-11T14:06:48.7410654Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-11T14:06:48.7501725Z With the provided path, there will be 9 files uploaded
+2026-10-11T14:06:48.7502517Z Artifact name is valid!
+2026-10-11T14:06:48.7502863Z Root directory input is valid!
+2026-10-11T14:06:49.1134187Z Beginning upload of artifact content to blob storage
+2026-10-11T14:06:49.1486335Z (node:6807) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-11T14:06:49.3570496Z Uploaded bytes 13089
+2026-10-11T14:06:49.4200034Z Finished uploading artifact content to blob storage!
+2026-10-11T14:06:49.4201925Z SHA256 digest of uploaded artifact zip is 4e3a7c64260c10da03fbba990c6544730d019f02f25100bb90d754bcfe589993
+2026-10-11T14:06:49.4203212Z Finalizing artifact upload
+2026-10-11T14:06:49.6563757Z Artifact comparator-38145168157-1.zip successfully finalized. Artifact ID 11705120766
+2026-10-11T14:06:49.6564983Z Artifact comparator-38145168157-1 has been successfully uploaded! Final size is 13089 bytes. Artifact ID is 11705120766
+2026-10-11T14:06:49.6571379Z Artifact download URL: https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/artifacts/11705120766
+2026-10-11T14:06:49.6795453Z Post job cleanup.
+2026-10-11T14:06:49.7673483Z [command]/usr/bin/git version
+2026-10-11T14:06:49.7710858Z git version 2.55.0
+2026-10-11T14:06:49.7744986Z Temporarily overriding HOME='/home/runner/work/_temp/55da0492-18f0-46c3-acd7-ba5aa9d9db63' before making global git config changes
+2026-10-11T14:06:49.7746460Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-11T14:06:49.7749960Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/bapat-lal-q-permanent-lean/bapat-lal-q-permanent-lean
+2026-10-11T14:06:49.7786448Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-11T14:06:49.7818416Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-11T14:06:49.8019654Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-11T14:06:49.8051876Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-11T14:06:49.8238297Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-11T14:06:49.8270067Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-11T14:06:49.8614774Z Cleaning up orphan processes
+2026-10-11T14:06:49.8954308Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
