@@ -13,3 +13,6 @@ rev = "89294ea02bd7cd678d59984add52cb4baef3dbf4"
 
 [[lean_lib]]
 name = "Bapat"
+
+[[lean_lib]]
+name = "Challenge"

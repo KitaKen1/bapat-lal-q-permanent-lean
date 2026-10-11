@@ -1,0 +1,9 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Bapat",
+  "theorem_names": [
+    "BapatLal.qPermanentMonotonicity",
+    "BapatLal.qPermanentHalfLineMonotonicity"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}
