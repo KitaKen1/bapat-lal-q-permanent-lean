@@ -357,9 +357,21 @@ also disproves Conjecture 2.
 
 ### Why GitHub CI?
 
-Lean Comparator compares both proofs with the FC targets, audits axioms, and
-replays the solution with its builtin Lean kernel. GitHub CI provides a public
-execution record; readers can rerun the published workflow.
+Lean Comparator checks that the completed proofs establish the FC target
+theorems. It compares their statements and dependent declarations, audits the
+permitted axioms, and replays the exported solution with its builtin Lean
+kernel.
+
+This workflow runs on a [fresh GitHub-hosted Ubuntu runner](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners).
+Readers can inspect a public execution record linking the checked-out commit,
+published workflow and verification output. The starting environment is supplied
+by GitHub; confidence in the record depends on GitHub's infrastructure and the
+published verification code.
+
+Readers can independently reproduce the check by cloning the repository with
+full Git history, pushing the tested revision to a new repository they control,
+and enabling GitHub Actions. They can then [run the published workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)
+and compare their own results with the saved record.
 
 ### Result (11 October 2026)
 
