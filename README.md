@@ -361,6 +361,16 @@ On 11 October 2026, the public `main` run of
 [Comparator verification](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157)
 completed successfully (run **38145168157**, attempt **1**). It checked commit
 [`0179c028957e0214c2af1741d01088ffa5ae65d5`](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/tree/0179c028957e0214c2af1741d01088ffa5ae65d5).
+
+> **90-day retention: use the saved evidence after expiry.**
+> This run's Actions artifact is configured for **90 days**, with a recorded
+> expiry of **9 January 2027, 13:56:24 UTC**. GitHub also retains Actions logs
+> for 90 days by default ([GitHub documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)).
+> The original run page may remain available after expiry, while its logs and
+> artifact are no longer accessible. **Use the [saved verification evidence](lean/evidence/comparator/38145168157/)**
+> to inspect this run after expiry: its original ZIP, full logs, execution
+> metadata and hashes are stored in Git independently of Actions retention.
+
 Both complete proofs were unchanged from the linked proof commit
 `2d1f9c72f7303f4d8ed4037861df4fa53064b43e`.
 
