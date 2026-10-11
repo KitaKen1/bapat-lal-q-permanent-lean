@@ -87,7 +87,7 @@ builtin Lean kernel; no additional external kernel was configured.
 From a clone of this repository containing the archive:
 
 ```bash
-cd lean/evidence/comparator/38145168157
+cd ComparatorLog20261011
 shasum -a 256 -c SHA256SUMS
 ```
 

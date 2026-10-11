@@ -14,7 +14,8 @@ PASS in the receipt and a successful job are required before the public run.
 After the private run succeeds, push the same verification commit to a branch
 of the PUBLIC proof repository. Run the workflow there and check it again.
 Download the public run's comparator-* artifact. Preserve the extracted files
-under lean/evidence/comparator/<run-id>/ in the public repository.
+under ComparatorLogYYYYMMDD/ at the repository root (for example,
+ComparatorLog20261011/).
 Adding only those receipt files does not trigger another verification run.
 
 Reply to the FC review with the PUBLIC run URL, permanently saved receipt URL,

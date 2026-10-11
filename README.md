@@ -367,7 +367,7 @@ completed successfully (run **38145168157**, attempt **1**). It checked commit
 > expiry of **9 January 2027, 13:56:24 UTC**. GitHub also retains Actions logs
 > for 90 days by default ([GitHub documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)).
 > The original run page may remain available after expiry, while its logs and
-> artifact are no longer accessible. **Use the [saved verification evidence](lean/evidence/comparator/38145168157/)**
+> artifact are no longer accessible. **Use the [saved verification evidence](ComparatorLog20261011/)**
 > to inspect this run after expiry: its original ZIP, full logs, execution
 > metadata and hashes are stored in Git independently of Actions retention.
 
@@ -391,11 +391,11 @@ Lean Comparator then:
 
 The challenge is an exact copy of the two-target file at FC PR #6857 revision
 `161294082da9cded42153cf8718e7688c6bc022a`; tool and dependency revisions are recorded
-in the [archived pins](lean/evidence/comparator/38145168157/receipt/pins.json).
+in the [archived pins](ComparatorLog20261011/receipt/pins.json).
 
 ### 3. How to read the result
 
-The [preserved Comparator log](lean/evidence/comparator/38145168157/receipt/comparator.log)
+The [preserved Comparator log](ComparatorLog20261011/receipt/comparator.log)
 contains the actual dependency reports and final success output:
 
 ```text
@@ -411,18 +411,18 @@ axioms actually used, and the final success message follows the comparison,
 axiom audit, and kernel checks in
 [the pinned Comparator implementation](https://github.com/leanprover/comparator/blob/ca04cfc72b550331658ec314bf47685281bfd4bf/Main.lean).
 
-The [saved job metadata](lean/evidence/comparator/38145168157/github/job-114486881308.json)
+The [saved job metadata](ComparatorLog20261011/github/job-114486881308.json)
 also records the verification step's `success` conclusion.
 
 ### 4. Archived evidence and independent verification
 
 For review after GitHub Actions retention expires, the
-[public evidence archive](lean/evidence/comparator/38145168157/) preserves:
+[public evidence archive](ComparatorLog20261011/) preserves:
 
 - The original artifact ZIP and its extracted receipt.
 - The complete workflow log ZIP and all extracted job/step logs.
 - GitHub API snapshots of the run, attempt, job and artifact.
-- [SHA-256 checksums](lean/evidence/comparator/38145168157/SHA256SUMS).
+- [SHA-256 checksums](ComparatorLog20261011/SHA256SUMS).
 
 The original artifact digest matches GitHub's recorded digest:
 
@@ -431,7 +431,7 @@ The original artifact digest matches GitHub's recorded digest:
 ```
 
 These files are stored in Git, independently of the Actions artifact/log
-retention period. See the [archive guide](lean/evidence/comparator/38145168157/README.md)
+retention period. See the [archive guide](ComparatorLog20261011/README.md)
 for the evidence checklist, checksum command, and instructions to independently
 rerun the tested commit.
 
