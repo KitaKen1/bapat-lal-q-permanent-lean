@@ -355,107 +355,30 @@ also disproves Conjecture 2.
 
 ## Appendix: Verification by Lean Comparator on GitHub CI runner
 
-### Benefits of running Lean Comparator on a GitHub CI runner
+### Why GitHub CI?
 
-Lean Comparator checks that the submitted proof establishes the target
-proposition. It builds and exports the target module (`Challenge.lean`) and the
-proof module (`Bapat.lean`) separately, then:
+Lean Comparator compares both proofs with the FC targets, audits axioms, and
+replays the solution with its builtin Lean kernel. GitHub CI provides a public
+execution record; readers can rerun the published workflow.
 
-1. Compares the target statements and their dependent declarations.
-2. Checks that the proof depends only on the permitted axioms.
-3. Replays the exported solution with the builtin Lean kernel.
+### Result (11 October 2026)
 
-Running this check on GitHub Actions provides a **GitHub-hosted execution
-record**, including the tested commit, workflow, step results and full logs.
-Readers can inspect the public code and the workflow that produced the result.
+[Public CI](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157)
+succeeded for **both Conjectures 1 and 2**, using the unchanged proofs at `2d1f9c7`.
 
-A reader can reproduce the check by cloning this repository with **full Git
-history**, publishing the tested commit listed below as `main` in a new GitHub
-repository, enabling Actions, and selecting **Actions → Comparator verification
-→ Run workflow**. The workflow supports
-[manual execution](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow).
-The [archive guide](ComparatorLog20261011/README.md) also gives commands for an
-independent run on a fresh Ubuntu machine.
+- FC target comparison: passed.
+- Axiom dependencies: only `propext`, `Classical.choice`, `Quot.sound`.
+- Lean kernel replay: accepted.
 
-**The limitation is retention:** GitHub stores Actions logs and artifacts for
-**90 days by default** ([GitHub documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)),
-and this workflow explicitly sets the artifact retention to **90 days**.
-After expiry, the original hosted logs and artifact are no longer available;
-the run summary page may still exist. To preserve the evidence beyond this
-period, the original ZIP, complete logs, GitHub API records and checksums were
-saved in the repository-root [ComparatorLog20261011/](ComparatorLog20261011/).
+**The artifact expires on 9 January 2027 (90 days).** GitHub's default log
+retention is also [90 days](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts).
+After expiry, use the archive below instead of the expired Actions logs/artifact.
 
-### Results of this CI run (within 90 days)
+### Evidence after 90 days
 
-On 11 October 2026, the public `main` run completed successfully:
+[ComparatorLog20261011/](ComparatorLog20261011/) preserves the original ZIP,
+full logs, configuration, GitHub execution records and checksums in Git.
+See its [verification and reproduction guide](ComparatorLog20261011/README.md).
 
-- [Original GitHub Actions run](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157): **38145168157**, attempt **1**.
-- [Original Comparator job](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157/job/114486881308): **success**.
-- [Tested commit](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/tree/0179c028957e0214c2af1741d01088ffa5ae65d5): `0179c028957e0214c2af1741d01088ffa5ae65d5`.
-
-> **These Actions links are for inspecting the original hosted record while its
-> logs and artifact are retained.** The artifact's recorded expiry is
-> **9 January 2027, 13:56:24 UTC**. After expiry, use the
-> [saved archive](ComparatorLog20261011/) described in the next section.
-
-Both complete proofs were unchanged from the linked proof commit
-`2d1f9c72f7303f4d8ed4037861df4fa53064b43e`. The challenge was an exact copy of
-the two-target file at FC PR #6857 revision
-`161294082da9cded42153cf8718e7688c6bc022a`.
-
-| FC target | Verified answer | Reported axiom dependencies |
-|---|---|---|
-| `BapatLal.qPermanentMonotonicity` | `False` (Conjecture 1 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
-| `BapatLal.qPermanentHalfLineMonotonicity` | `False` (Conjecture 2 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
-
-In the job, open **Compare both FC targets, audit axioms, and replay the Lean
-kernel**. Its output includes the following lines, also preserved in the
-[archived Comparator log](ComparatorLog20261011/receipt/comparator.log):
-
-```text
-info: Bapat/Main.lean:38:0: 'BapatLal.qPermanentMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Bapat/DaFonseca.lean:37:0: 'BapatLal.qPermanentHalfLineMonotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
-Lean default kernel accepts the solution
-Your solution is okay!
-Finished with result: success
-```
-
-The first two lines report the axioms actually used. The three-axiom allowlist
-alone is a policy setting. In the
-[pinned Comparator implementation](https://github.com/leanprover/comparator/blob/ca04cfc72b550331658ec314bf47685281bfd4bf/Main.lean),
-`Your solution is okay!` is printed only after statement comparison, axiom
-auditing and kernel checks pass. The
-[workflow at the tested commit](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/0179c028957e0214c2af1741d01088ffa5ae65d5/.github/workflows/comparator.yml)
-fails the job if verification fails; the saved receipt records `PASS`.
-
-### Checking the archive after the CI runner's 90-day retention period
-
-**Start at [ComparatorLog20261011/](ComparatorLog20261011/).** These files are
-stored in Git and can be inspected after Actions retention expires.
-
-| Saved evidence | What a reader can check |
-|---|---|
-| [Run metadata](ComparatorLog20261011/github/run.json) and [job metadata](ComparatorLog20261011/github/job-114486881308.json) | Recorded run/attempt, tested commit and successful step conclusions |
-| [Comparator log](ComparatorLog20261011/receipt/comparator.log) and [complete job log](ComparatorLog20261011/github/job-114486881308.log) | Both theorem dependency reports, kernel acceptance and final success output |
-| [Configuration](ComparatorLog20261011/receipt/config.json), [input check](ComparatorLog20261011/receipt/input-check.json) and [pins](ComparatorLog20261011/receipt/pins.json) | Both targets, permitted axioms, unchanged proof hashes, challenge and tool revisions |
-| [Original artifact ZIP](ComparatorLog20261011/comparator-38145168157-1.zip), [full workflow log ZIP](ComparatorLog20261011/github/run-38145168157-attempt-1-logs.zip) and [checksums](ComparatorLog20261011/SHA256SUMS) | Preserved downloads and their byte integrity |
-
-From a clone, verify the saved files with:
-
-```bash
-cd ComparatorLog20261011
-shasum -a 256 -c SHA256SUMS
-```
-
-The original artifact hash matches the digest in the
-[saved GitHub artifact record](ComparatorLog20261011/github/artifact-11705120766.json).
-The [archive guide](ComparatorLog20261011/README.md) explains the full checklist
-and how to independently rerun the tested source.
-
-**What becomes unavailable after expiry:** the expired original logs cannot be
-viewed, and the original Actions artifact cannot be downloaded from GitHub's
-run page. The saved files remain inspectable, but the API snapshots are
-unsigned copies; hashes are not a signed GitHub attestation of the historical
-execution. An independent rerun verifies the proof again and produces a new
-execution record. Future changes to the proof or verification inputs require
-their own verification run.
+The archive remains readable after expiry. Its saved records are unsigned;
+they are not a signed GitHub attestation.
