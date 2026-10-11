@@ -355,25 +355,26 @@ also disproves Conjecture 2.
 
 ## Appendix: Verification by Lean Comparator on GitHub CI runner
 
-### Why GitHub CI?
+### Why use Lean Comparator and GitHub CI?
 
 Lean Comparator checks that the completed proofs establish the FC target
 theorems. It compares their statements and dependent declarations, audits the
 permitted axioms, and replays the exported solution with its builtin Lean
 kernel.
 
-This workflow runs on a [fresh GitHub-hosted Ubuntu runner](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners).
-Readers can inspect a public execution record linking the checked-out commit,
-published workflow and verification output. The starting environment is supplied
-by GitHub; confidence in the record depends on GitHub's infrastructure and the
-published verification code.
+GitHub CI runs this workflow on a [fresh GitHub-hosted Ubuntu runner](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners).
+GitHub supplies the starting environment.
+
+Readers can inspect the public execution record to see which commit and workflow
+were used and what Comparator reported. Confidence in this record depends on
+GitHub's infrastructure and the published verification code.
 
 Readers can independently reproduce the check by cloning the repository with
 full Git history, pushing the tested revision to a new repository they control,
 and enabling GitHub Actions. They can then [run the published workflow](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)
 and compare their own results with the saved record.
 
-### Result (11 October 2026)
+### Results for this repository's target theorems (11 October 2026)
 
 [Public CI](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157)
 succeeded for **both Conjectures 1 and 2**, using the unchanged proofs at `2d1f9c7`.
