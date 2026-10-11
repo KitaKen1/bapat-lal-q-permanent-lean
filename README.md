@@ -355,6 +355,8 @@ also disproves Conjecture 2.
 
 ## Appendix: Verification by Lean Comparator
 
+### 1. Verification result
+
 On 11 October 2026, the public `main` run of
 [Comparator verification](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/actions/runs/38145168157)
 completed successfully (run **38145168157**, attempt **1**). It checked commit
@@ -367,14 +369,21 @@ Both complete proofs were unchanged from the linked proof commit
 | `BapatLal.qPermanentMonotonicity` | `False` (Conjecture 1 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
 | `BapatLal.qPermanentHalfLineMonotonicity` | `False` (Conjecture 2 is disproved) | `propext`, `Classical.choice`, `Quot.sound` |
 
+### 2. What Comparator checks
+
 The [workflow at the tested commit](https://github.com/KitaKen1/bapat-lal-q-permanent-lean/blob/0179c028957e0214c2af1741d01088ffa5ae65d5/.github/workflows/comparator.yml)
 builds and exports the FC challenge and the complete solution separately.
-Lean Comparator checks the target statements and their dependent declarations,
-audits the solution's axiom dependencies against the three-axiom allowlist, and
-replays the exported solution with the builtin Lean kernel. The challenge is an
-exact copy of the two-target file at FC PR #6857 revision
+Lean Comparator then:
+
+1. Compares the target statements and their dependent declarations.
+2. Audits the solution's axiom dependencies against the three-axiom allowlist.
+3. Replays the exported solution with the builtin Lean kernel.
+
+The challenge is an exact copy of the two-target file at FC PR #6857 revision
 `161294082da9cded42153cf8718e7688c6bc022a`; tool and dependency revisions are recorded
 in the [archived pins](lean/evidence/comparator/38145168157/receipt/pins.json).
+
+### 3. How to read the result
 
 The [preserved Comparator log](lean/evidence/comparator/38145168157/receipt/comparator.log)
 contains the actual dependency reports and final success output:
@@ -391,14 +400,20 @@ The allowlist alone is a policy setting. The two dependency reports show the
 axioms actually used, and the final success message follows the comparison,
 axiom audit, and kernel checks in
 [the pinned Comparator implementation](https://github.com/leanprover/comparator/blob/ca04cfc72b550331658ec314bf47685281bfd4bf/Main.lean).
+
 The [saved job metadata](lean/evidence/comparator/38145168157/github/job-114486881308.json)
 also records the verification step's `success` conclusion.
 
+### 4. Archived evidence and independent verification
+
 For review after GitHub Actions retention expires, the
-[public evidence archive](lean/evidence/comparator/38145168157/) preserves the
-original artifact ZIP, its extracted receipt, the complete workflow log ZIP,
-all extracted job/step logs, GitHub API snapshots of the run, attempt, job and
-artifact, and [SHA-256 checksums](lean/evidence/comparator/38145168157/SHA256SUMS).
+[public evidence archive](lean/evidence/comparator/38145168157/) preserves:
+
+- The original artifact ZIP and its extracted receipt.
+- The complete workflow log ZIP and all extracted job/step logs.
+- GitHub API snapshots of the run, attempt, job and artifact.
+- [SHA-256 checksums](lean/evidence/comparator/38145168157/SHA256SUMS).
+
 The original artifact digest matches GitHub's recorded digest:
 
 ```text
@@ -408,6 +423,8 @@ The original artifact digest matches GitHub's recorded digest:
 These files are stored in Git, independently of the Actions artifact/log
 retention period. See the [archive guide](lean/evidence/comparator/38145168157/README.md)
 for the evidence checklist, checksum command, and instructions to independently
-rerun the tested commit. The API snapshots and hashes preserve the retrieved
+rerun the tested commit.
+
+The API snapshots and hashes preserve the retrieved
 record and its integrity; they are not a signed GitHub attestation. Future
 changes to the proof or verification inputs require a new verification run.
