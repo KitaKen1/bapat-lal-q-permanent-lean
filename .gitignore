@@ -4,3 +4,4 @@
 *.olean
 *.ilean
 *.ir
+/comparator-receipt/
